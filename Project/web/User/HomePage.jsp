@@ -21,6 +21,7 @@
         <!--<a href="MyProfile.jsp">Profile</a>-->
         <a href="ViewProperty.jsp">Property</a>
         <a href="ViewFurniture.jsp">Furniture</a>
+         <a href="Wishlist.jsp">Wishlist</a>
         <input type="submit" name="btnmyprofile" value="My Profile">
         </form>
     </body>
