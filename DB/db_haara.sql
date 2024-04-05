@@ -7,7 +7,7 @@
 # Server OS:                    Win32
 # Target compatibility:         ANSI SQL
 # HeidiSQL version:             4.0
-# Date/time:                    2024-04-03 17:32:09
+# Date/time:                    05-04-2024 19:10:02
 # --------------------------------------------------------
 
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ANSI,NO_BACKSLASH_ESCAPES';*/
@@ -123,10 +123,12 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_chat" (
 
 CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_complaint" (
   "complaint_id" int(10) unsigned NOT NULL auto_increment,
-  "complaint_content" varchar(50) default NULL,
+  "complaint_content" varchar(150) default NULL,
   "user_id" int(10) unsigned default NULL,
+  "complaint_reply" varchar(150) default 'not yet replied',
+  "complaint_status" int(10) unsigned default '0',
   PRIMARY KEY  ("complaint_id")
-);
+) AUTO_INCREMENT=8;
 
 
 
@@ -134,8 +136,16 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_complaint" (
 # Dumping data for table 'tbl_complaint'
 #
 
-# No data found.
+LOCK TABLES "tbl_complaint" WRITE;
+/*!40000 ALTER TABLE "tbl_complaint" DISABLE KEYS;*/
+REPLACE INTO "tbl_complaint" ("complaint_id", "complaint_content", "user_id", "complaint_reply", "complaint_status") VALUES
+	('6','gdgdldlakdsq','11','pavam
 
+','1');
+REPLACE INTO "tbl_complaint" ("complaint_id", "complaint_content", "user_id", "complaint_reply", "complaint_status") VALUES
+	('7','sdfjksdf','11','not yet replied','0');
+/*!40000 ALTER TABLE "tbl_complaint" ENABLE KEYS;*/
+UNLOCK TABLES;
 
 
 #
@@ -258,6 +268,7 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_furniture_owner" (
   "furniture_owner_password" varchar(50) default NULL,
   "furniture_owner_contact" bigint(20) unsigned default NULL,
   "furniture_owner_photo" varchar(50) default NULL,
+  "furniture_owner_status" varchar(50) default '0',
   PRIMARY KEY  ("furniture_owner_id")
 ) AUTO_INCREMENT=9;
 
@@ -269,14 +280,14 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_furniture_owner" (
 
 LOCK TABLES "tbl_furniture_owner" WRITE;
 /*!40000 ALTER TABLE "tbl_furniture_owner" DISABLE KEYS;*/
-REPLACE INTO "tbl_furniture_owner" ("furniture_owner_id", "furniture_owner_name", "furniture_owner_email", "furniture_owner_address", "place_id", "furniture_owner_proof", "furniture_owner_password", "furniture_owner_contact", "furniture_owner_photo") VALUES
-	('1','elna','elna@gmail.com',NULL,'2','UserPhoto_1695.png','kochukudiyil h',NULL,NULL);
-REPLACE INTO "tbl_furniture_owner" ("furniture_owner_id", "furniture_owner_name", "furniture_owner_email", "furniture_owner_address", "place_id", "furniture_owner_proof", "furniture_owner_password", "furniture_owner_contact", "furniture_owner_photo") VALUES
-	('2','Aswathy Ravindran','aswathyravindran.t02@gmail.com','vhdfklvmdfkv','2','','ghdjdfgl','9744185351',NULL);
-REPLACE INTO "tbl_furniture_owner" ("furniture_owner_id", "furniture_owner_name", "furniture_owner_email", "furniture_owner_address", "place_id", "furniture_owner_proof", "furniture_owner_password", "furniture_owner_contact", "furniture_owner_photo") VALUES
-	('3','Sharon Sunny','sharon@gmail.com','mvpa','4','','sharon','8129289229',NULL);
-REPLACE INTO "tbl_furniture_owner" ("furniture_owner_id", "furniture_owner_name", "furniture_owner_email", "furniture_owner_address", "place_id", "furniture_owner_proof", "furniture_owner_password", "furniture_owner_contact", "furniture_owner_photo") VALUES
-	('8','satto','satto@gmail.com','satto house','4','UserPhoto_1035.png','satto1','8129282992','UserPhoto_1077.png');
+REPLACE INTO "tbl_furniture_owner" ("furniture_owner_id", "furniture_owner_name", "furniture_owner_email", "furniture_owner_address", "place_id", "furniture_owner_proof", "furniture_owner_password", "furniture_owner_contact", "furniture_owner_photo", "furniture_owner_status") VALUES
+	('1','elna','elna@gmail.com',NULL,'2','UserPhoto_1695.png','kochukudiyil h',NULL,NULL,'1');
+REPLACE INTO "tbl_furniture_owner" ("furniture_owner_id", "furniture_owner_name", "furniture_owner_email", "furniture_owner_address", "place_id", "furniture_owner_proof", "furniture_owner_password", "furniture_owner_contact", "furniture_owner_photo", "furniture_owner_status") VALUES
+	('2','Aswathy Ravindran','aswathyravindran.t02@gmail.com','vhdfklvmdfkv','2','','ghdjdfgl','9744185351',NULL,'1');
+REPLACE INTO "tbl_furniture_owner" ("furniture_owner_id", "furniture_owner_name", "furniture_owner_email", "furniture_owner_address", "place_id", "furniture_owner_proof", "furniture_owner_password", "furniture_owner_contact", "furniture_owner_photo", "furniture_owner_status") VALUES
+	('3','Sharon Sunny','sharon@gmail.com','mvpa','4','','sharon','8129289229',NULL,'2');
+REPLACE INTO "tbl_furniture_owner" ("furniture_owner_id", "furniture_owner_name", "furniture_owner_email", "furniture_owner_address", "place_id", "furniture_owner_proof", "furniture_owner_password", "furniture_owner_contact", "furniture_owner_photo", "furniture_owner_status") VALUES
+	('8','satto','satto@gmail.com','satto house','4','UserPhoto_1035.png','satto1','8129282992','UserPhoto_1077.png','2');
 /*!40000 ALTER TABLE "tbl_furniture_owner" ENABLE KEYS;*/
 UNLOCK TABLES;
 
@@ -358,10 +369,11 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_property_owners" (
   "property_owners_password" varchar(10) default NULL,
   "property_owners_proof" varchar(50) default NULL,
   "property_owners_contact" bigint(20) unsigned default NULL,
-  "place_id" int(10) unsigned default NULL,
+  "place_id" int(10) unsigned default '0',
   "property_owners_photo" varchar(50) default NULL,
+  "property_owners_status" varchar(50) default '0',
   PRIMARY KEY  ("property_owners_id")
-) AUTO_INCREMENT=4;
+) AUTO_INCREMENT=5;
 
 
 
@@ -371,8 +383,10 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_property_owners" (
 
 LOCK TABLES "tbl_property_owners" WRITE;
 /*!40000 ALTER TABLE "tbl_property_owners" DISABLE KEYS;*/
-REPLACE INTO "tbl_property_owners" ("property_owners_id", "property_owners_name", "property_owners_email", "property_owners_address", "property_owners_password", "property_owners_proof", "property_owners_contact", "place_id", "property_owners_photo") VALUES
-	('3','Mariya Nixon','mn@gmail.com','palamattam','mariy@1','UserPhoto_1997.png','234567890','4','UserPhoto_1997.png');
+REPLACE INTO "tbl_property_owners" ("property_owners_id", "property_owners_name", "property_owners_email", "property_owners_address", "property_owners_password", "property_owners_proof", "property_owners_contact", "place_id", "property_owners_photo", "property_owners_status") VALUES
+	('3','Mariya Nixon','mn@gmail.com','palamattam','mariy@1','UserPhoto_1997.png','234567890','4','UserPhoto_1997.png','1');
+REPLACE INTO "tbl_property_owners" ("property_owners_id", "property_owners_name", "property_owners_email", "property_owners_address", "property_owners_password", "property_owners_proof", "property_owners_contact", "place_id", "property_owners_photo", "property_owners_status") VALUES
+	('4','ron','ron@gmail.com','ron house','ronsi4','UserPhoto_2018.png','5673738290','2','UserPhoto_2018.png','1');
 /*!40000 ALTER TABLE "tbl_property_owners" ENABLE KEYS;*/
 UNLOCK TABLES;
 
@@ -385,11 +399,11 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_request" (
   "request_id" int(10) unsigned NOT NULL auto_increment,
   "request_date" datetime default NULL,
   "user_id" int(10) unsigned default NULL,
-  "property_id" int(10) unsigned default NULL,
-  "request_status" varchar(50) default NULL,
-  "furniture_id" int(10) unsigned default NULL,
+  "property_id" int(10) unsigned default '0',
+  "request_status" varchar(50) default '0',
+  "furniture_id" int(10) unsigned default '0',
   PRIMARY KEY  ("request_id")
-) AUTO_INCREMENT=9;
+) AUTO_INCREMENT=11;
 
 
 
@@ -400,17 +414,7 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_request" (
 LOCK TABLES "tbl_request" WRITE;
 /*!40000 ALTER TABLE "tbl_request" DISABLE KEYS;*/
 REPLACE INTO "tbl_request" ("request_id", "request_date", "user_id", "property_id", "request_status", "furniture_id") VALUES
-	('3','2024-04-01 00:00:00','8','5','2',NULL);
-REPLACE INTO "tbl_request" ("request_id", "request_date", "user_id", "property_id", "request_status", "furniture_id") VALUES
-	('4','2024-04-01 00:00:00','8','5','1',NULL);
-REPLACE INTO "tbl_request" ("request_id", "request_date", "user_id", "property_id", "request_status", "furniture_id") VALUES
-	('5','2024-04-01 00:00:00','8','5','1',NULL);
-REPLACE INTO "tbl_request" ("request_id", "request_date", "user_id", "property_id", "request_status", "furniture_id") VALUES
-	('6','2024-04-02 00:00:00','8','6','1',NULL);
-REPLACE INTO "tbl_request" ("request_id", "request_date", "user_id", "property_id", "request_status", "furniture_id") VALUES
-	('7','2024-04-02 00:00:00','8',NULL,'1','2');
-REPLACE INTO "tbl_request" ("request_id", "request_date", "user_id", "property_id", "request_status", "furniture_id") VALUES
-	('8','2024-04-02 00:00:00','8',NULL,'2','2');
+	('10','2024-04-03 00:00:00','11','0','1','2');
 /*!40000 ALTER TABLE "tbl_request" ENABLE KEYS;*/
 UNLOCK TABLES;
 
@@ -430,7 +434,7 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_user" (
   "user_address" varchar(100) default NULL,
   "user_photo" varchar(50) default NULL,
   PRIMARY KEY  ("user_id")
-) AUTO_INCREMENT=13;
+) AUTO_INCREMENT=15;
 
 
 
@@ -444,6 +448,10 @@ REPLACE INTO "tbl_user" ("user_id", "user_name", "user_email", "user_password", 
 	('11','Anand Ravindran','anand@gmail.com','anand1','UserPhoto_1730.jpg','4','8129289229','thadathil h','UserPhoto_1730.jpg');
 REPLACE INTO "tbl_user" ("user_id", "user_name", "user_email", "user_password", "user_proof", "place_id", "user_contact", "user_address", "user_photo") VALUES
 	('12','Aswathy Ravindran','aswathyravindran.t02@gmail.com','aswathy1','UserPhoto_1295.jpg','4','9744185351','thadathil h','UserPhoto_1295.jpg');
+REPLACE INTO "tbl_user" ("user_id", "user_name", "user_email", "user_password", "user_proof", "place_id", "user_contact", "user_address", "user_photo") VALUES
+	('13','madhav','madhav@gmail.com','madhav1','UserPhoto_1638.png','4','345678912','madhav h','UserPhoto_1638.png');
+REPLACE INTO "tbl_user" ("user_id", "user_name", "user_email", "user_password", "user_proof", "place_id", "user_contact", "user_address", "user_photo") VALUES
+	('14','seetha','seetha@gmail.com','seetha1','UserPhoto_1604.png','4','7654312199','seetha h','UserPhoto_1604.png');
 /*!40000 ALTER TABLE "tbl_user" ENABLE KEYS;*/
 UNLOCK TABLES;
 
@@ -456,6 +464,7 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "tbl_wishlist" (
   "wishlist_id" int(10) unsigned NOT NULL auto_increment,
   "property_id" int(10) unsigned default NULL,
   "user_id" int(10) unsigned default NULL,
+  "furniture_id" int(10) unsigned default NULL,
   PRIMARY KEY  ("wishlist_id")
 );
 

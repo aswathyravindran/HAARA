@@ -18,9 +18,11 @@
         %>
         <form name="frmMyprofile" method="post">
         <h1>Hello <%=session.getAttribute("uname")%></h1>
-        <!--<a href="MyProfile.jsp">Profile</a>-->
+<!--<a href="MyProfile.jsp">Profile</a>-->
         <a href="ViewProperty.jsp">Property</a>
         <a href="ViewFurniture.jsp">Furniture</a>
+        <a href="UViewRequest.jsp">Request Status</a>
+        <a href="Complaint.jsp">Have any complaints?</a>
         <input type="submit" name="btnmyprofile" value="My Profile">
         </form>
     </body>

@@ -19,6 +19,7 @@
         <a href="PropertyOwnerList.jsp">Property Owners</a>
         <a href="FurnitureOwnerList.jsp">Furniture Owners</a>
         <a href="UserList.jsp">Users</a>
+        <a href="Complaints.jsp">User Complaints</a>
     </body>
 </html>
 

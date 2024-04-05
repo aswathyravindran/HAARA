@@ -14,6 +14,7 @@
             <th >Status</th>
             <th >User Name</th>
             <th >Furniture Details</th>
+            <th >Action</th>
         </tr>
 
 
@@ -52,9 +53,20 @@
         </td>
         <td ><%=rs1.getString("user_name")%></td>
         <td ><%=rs1.getString("furniture_description")%></td>
+        <td ><%
+            if (s == 0) {
+            %>
+            <a href="ViewRequests.jsp?ac=<%=rs1.getString("request_id")%>">Accept</a>
+            <a href="ViewRequests.jsp?rj=<%=rs1.getString("request_id")%>">Reject</a>
+            <% } else if (s == 1) {
+            %>
 
-        <td ><a href="ViewRequests.jsp?ac=<%=rs1.getString("request_id")%>">Accept</a></td> 
-        <td ><a href="ViewRequests.jsp?rj=<%=rs1.getString("request_id")%>">Reject</a></td> 
+            <a href="ViewRequests.jsp?rj=<%=rs1.getString("request_id")%>">Reject</a>
+            <% } else {
+            %><a href="ViewRequests.jsp?ac=<%=rs1.getString("request_id")%>">Accept</a>
+            <% }%>
+        </td>
+
     </tr>
     <%                      }
 

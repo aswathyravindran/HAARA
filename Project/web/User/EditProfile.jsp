@@ -32,7 +32,7 @@
         if (urs.next()) {
         %>
         <form method="post" name="userprof">
-            <table border="1" align="center" height="300px" width="300px">
+            <table border="1" align="center">
                 <tr align="center">
                     <td colspan="2">Edit Profile</td>
                 </tr>
@@ -42,7 +42,7 @@
                 </tr>
                 <tr>
                     <td>Contact</td>
-                    <td><input type="number" name="txtcontact" max="9999999999" value="<%=urs.getString("user_contact")%>"> </td>
+                    <td><input type="number" name="txtcontact" max="9999999999" value="<%=urs.getString("user_contact")%>"></td>
                 </tr>
                 <tr>
                     <td>Email</td>
