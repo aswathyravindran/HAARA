@@ -22,8 +22,12 @@
         <a href="ViewProperty.jsp">Property</a>
         <a href="ViewFurniture.jsp">Furniture</a>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <a href="UViewRequest.jsp">Request Status</a>
         <a href="Complaint.jsp">Have any complaints?</a>
+=======
+         <a href="Wishlist.jsp">Wishlist</a>
+>>>>>>> b24a42f3a5cbc3062dd115023cf93d0d0ac5b9a2
 =======
          <a href="Wishlist.jsp">Wishlist</a>
 >>>>>>> b24a42f3a5cbc3062dd115023cf93d0d0ac5b9a2
