@@ -7,7 +7,6 @@
 <%@page import="java.sql.ResultSet"%>
 <jsp:useBean class="DB.ConnectionClass" id="con"></jsp:useBean>
 
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -26,10 +25,10 @@
                 String selQry1 = "select * from tbl_admin where admin_email= '" + email + "' and admin_password= '" + password + "' ";
                 ResultSet rs1 = con.selectCommand(selQry1);
 
-                String selQry2 = "select * from tbl_property_owners where property_owners_email= '" + email + "' and property_owners_password= '" + password + "' ";
+                String selQry2 = "select * from tbl_property_owners where property_owners_email= '" + email + "' and property_owners_password= '" + password + "' and property_owners_status=1";
                 ResultSet rs2 = con.selectCommand(selQry2);
 
-                String selQry3 = "select * from tbl_furniture_owner where furniture_owner_email= '" + email + "' and furniture_owner_password= '" + password + "' ";
+                String selQry3 = "select * from tbl_furniture_owner where furniture_owner_email= '" + email + "' and furniture_owner_password= '" + password + "' and furniture_owner_status=1";
                 ResultSet rs3 = con.selectCommand(selQry3);
 
                 if (rs.next()) {

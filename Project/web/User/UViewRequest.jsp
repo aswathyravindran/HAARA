@@ -80,7 +80,7 @@
             %>Reject<% }%>
             </td>
         
-        <td ><%=rs.getString("furniture_details")%></td>
+        <td ><%=rs.getString("furniture_description")%></td>
       
        
     </tr>

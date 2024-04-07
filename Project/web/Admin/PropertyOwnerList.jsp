@@ -14,10 +14,17 @@
         <title>Pownerlist</title>
     </head>
     <body>
-        <%    if (request.getParameter("del") != null) {
-                String delQry = "delete from tbl_property_owners where property_owners_id='" + request.getParameter("del") + "'";
-                con.executeCommand(delQry);
+        <%    
+            if (request.getParameter("ac") != null) {
+                String s = "update tbl_property_owners set property_owners_status=1 where property_owners_id='" + request.getParameter("ac") + "'";
+                con.executeCommand(s);
                 response.sendRedirect("PropertyOwnerList.jsp");
+            } else if (request.getParameter("rj") != null) {
+                String s = "update tbl_property_owners set property_owners_status=2 where property_owners_id='" + request.getParameter("rj") + "'";
+                boolean st = con.executeCommand(s);
+                if (st) {
+                    response.sendRedirect("PropertyOwnerList.jsp");
+                }
             }
 
         %>
@@ -30,7 +37,6 @@
                     <th>Email</th>
                     <th>Contact</th>
                     <th>Address</th>
-                    <th>Status</th>
                     <th >Action</th>
                 </tr>
 
@@ -49,7 +55,26 @@
                     <td ><%=rs1.getString("property_owners_email")%></td>
                     <td ><%=rs1.getString("property_owners_contact")%></td>
                     <td ><%=rs1.getString("property_owners_address")%></td>
-                    <td ><a href="PropertyOwnerList.jsp?del=<%=rs1.getString("property_owners_id")%>">Delete</a></td>
+                    <td>
+                        <%
+                        
+                            if (rs1.getString("property_owners_status").equals("0")) {
+                        %>
+                        <a href="PropertyOwnerList.jsp?ac=<%=rs1.getString("property_owners_id")%>">Accept</a>
+                        <a href="PropertyOwnerList.jsp?rj=<%=rs1.getString("property_owners_id")%>">Reject</a>
+                        <% } else if (rs1.getString("property_owners_status").equals("1")) {
+                        %>
+
+                        <a href="PropertyOwnerList.jsp?rj=<%=rs1.getString("property_owners_id")%>">Reject</a>                        
+                        <%
+                                }
+                            else if(rs1.getString("property_owners_status").equals("2"))
+                                    {
+                        %>
+                        <a href="PropertyOwnerList.jsp?ac=<%=rs1.getString("property_owners_id")%>">Accept</a>
+                        <% 
+                    }%>
+                    </td>
                 </tr>
                 <%                      }
 

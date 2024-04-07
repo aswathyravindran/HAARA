@@ -13,23 +13,27 @@
         <title>Furniture Owners</title>
     </head>
     <body>
-        <%    if (request.getParameter("del") != null) {
-                String delQry = "delete from tbl_furniture_owner where furniture_owner_id='" + request.getParameter("del") + "'";
-                con.executeCommand(delQry);
+        <%   if (request.getParameter("ac") != null) {
+                String s = "update tbl_furniture_owner set furniture_owner_status=1 where furniture_owner_id='" + request.getParameter("ac") + "'";
+                con.executeCommand(s);
                 response.sendRedirect("FurnitureOwnerList.jsp");
+            } else if (request.getParameter("rj") != null) {
+                String s = "update tbl_furniture_owner set furniture_owner_status=2 where furniture_owner_id='" + request.getParameter("rj") + "'";
+                boolean st = con.executeCommand(s);
+                if (st) {
+                    response.sendRedirect("FurnitureOwnerList.jsp");
+                }
             }
-
         %>
         <h1>Furniture Owners</h1>
         <form name="folist">
             <table border="1" align="center">
                 <tr >
-                    <th >Sl.No</th>
-                    <th >Name</th>
+                   <th>Sl.No</th>
+                    <th>Name</th>
                     <th>Email</th>
                     <th>Contact</th>
                     <th>Address</th>
-                    <th>Status</th>
                     <th >Action</th>
                 </tr>
 
@@ -48,7 +52,32 @@
                     <td ><%=rs2.getString("furniture_owner_email")%></td>
                     <td ><%=rs2.getString("furniture_owner_contact")%></td>
                     <td ><%=rs2.getString("furniture_owner_address")%></td>
-                    <td ><a href="FurnitureOwnerList.jsp?del=<%=rs2.getString("furniture_owner_id")%>">Delete</a></td>
+                    <td>
+                        <%
+                        
+                            if (rs2.getString("furniture_owner_status").equals("0")) {
+                        %>
+                        <a href="FurnitureOwnerList.jsp?ac=<%=rs2.getString("furniture_owner_id")%>">Accept</a>
+                        <a href="FurnitureOwnerList.jsp?rj=<%=rs2.getString("furniture_owner_id")%>">Reject</a>
+                        <% } else if (rs2.getString("furniture_owner_status").equals("1")) {
+                        %>
+
+                        <a href="FurnitureOwnerList.jsp?rj=<%=rs2.getString("furniture_owner_id")%>">Reject</a>                        
+                        <%
+                        
+                                }
+                                else if(rs2.getString("furniture_owner_status").equals("2"))
+                                    {
+                        %>
+                        <a href="FurnitureOwnerList.jsp?ac=<%=rs2.getString("furniture_owner_id")%>">Accept</a>
+                        <% 
+                    }%>
+                    </td>
+
+
+
+
+
                 </tr>
                 <%                      }
 
@@ -57,9 +86,6 @@
 
 
             </table>
-
-
-
         </form>
     </body>
 </html>
