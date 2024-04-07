@@ -12,13 +12,11 @@
         <title>Home Page</title>
     </head>
     <body>
-        <%if (request.getParameter("btnmyprofile") != null) {
-            response.sendRedirect("../Shopowner/Sprofile.jsp");
-        }
-        %>
         <form name="frmMyprofile" method="post">
         <h1>Hello <%=session.getAttribute("fname")%></h1>
-        <input type="submit" name="btnmyprofile" value="My Profile">
+        <a href="Sprofile.jsp">Profile</a>
+        <a href="Furniture.jsp">Furniture</a>
+        <a href="ViewRequests.jsp">Requests</a>
         </form>
     </body>
 </html>

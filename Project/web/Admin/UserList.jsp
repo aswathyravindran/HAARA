@@ -30,7 +30,6 @@
                 <th>Email</th>
                 <th>Contact</th>
                 <th>Address</th>
-                <th>Status</th>
                 <th>Action</th>
             </tr>
 

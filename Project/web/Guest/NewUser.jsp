@@ -74,7 +74,7 @@
             </tr>
                 <tr>
                     <td><input type="submit" value="Submit" name="btnsubmit"></td>
-                    <td><input type="submit" value="Reset" name="btnreset"></td>
+                    <td><input type="reset" value="Reset" name="btnreset"></td>
                 </tr>
             </table>
         </form>
