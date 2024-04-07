@@ -2,12 +2,45 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
+        <group/>
+=======
         <group>
+<<<<<<< HEAD
             <file>file:/D:/HAARA/Project/web/Admin/Complaints.jsp</file>
             <file>file:/D:/HAARA/Project/web/User/Wishlist.jsp</file>
             <file>file:/D:/HAARA/Project/web/User/Complaint.jsp</file>
             <file>file:/D:/HAARA/Project/web/Admin/ComplaintReply.jsp</file>
             <file>file:/D:/HAARA/Project/web/Guest/Login.jsp</file>
+=======
+<<<<<<< HEAD
+            <file>file:/E:/HAARA/Project/web/Assets/Templates/Admin/index.html</file>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <file>file:/D:/HAARA/Project/web/User/EditProfile.jsp</file>
+            <file>file:/D:/HAARA/Project/web/Shopowner/ViewRequests.jsp</file>
+            <file>file:/D:/HAARA/Project/web/Admin/PropertyOwnerList.jsp</file>
+            <file>file:/D:/HAARA/Project/web/User/HomePage.jsp</file>
+            <file>file:/D:/HAARA/Project/web/User/UViewRequest.jsp</file>
+            <file>file:/D:/HAARA/Project/web/Guest/Login.jsp</file>
+            <file>file:/D:/HAARA/Project/web/Shopowner/ShomePage.jsp</file>
+            <file>file:/D:/HAARA/Project/web/Admin/FurnitureOwnerList.jsp</file>
+=======
+=======
+>>>>>>> b24a42f3a5cbc3062dd115023cf93d0d0ac5b9a2
+            <file>file:/E:/HAARA/Project/web/User/ViewMoreProp.jsp</file>
+            <file>file:/E:/HAARA/Project/web/User/Wishlist.jsp</file>
+            <file>file:/E:/HAARA/Project/web/Guest/Login.jsp</file>
+            <file>file:/E:/HAARA/Project/web/User/ViewMoreFur.jsp</file>
+            <file>file:/E:/HAARA/Project/web/User/HomePage.jsp</file>
+<<<<<<< HEAD
+>>>>>>> b24a42f3a5cbc3062dd115023cf93d0d0ac5b9a2
+=======
+>>>>>>> b24a42f3a5cbc3062dd115023cf93d0d0ac5b9a2
+>>>>>>> 1ee53f7b6bdb8e09f88ac111bdc5aa9efb0452f9
+>>>>>>> bd93d311a75f4d94200b83f772a40a009a42de70
         </group>
+>>>>>>> 19f4d5ee9376b59fba7a750e47be3e14e041e128
     </open-files>
 </project-private>
