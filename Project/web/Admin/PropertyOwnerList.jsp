@@ -37,6 +37,7 @@
                     <th>Email</th>
                     <th>Contact</th>
                     <th>Address</th>
+                    <th>Proof</th>
                     <th >Action</th>
                 </tr>
 
@@ -55,6 +56,9 @@
                     <td ><%=rs1.getString("property_owners_email")%></td>
                     <td ><%=rs1.getString("property_owners_contact")%></td>
                     <td ><%=rs1.getString("property_owners_address")%></td>
+                    <td >
+                        <a href="../Assets/Files/<%=rs1.getString("property_owners_proof")%>"><img src="../Assets/Files/<%=rs1.getString("property_owners_proof")%>" width="120" height="120"/></a>
+                    </td>
                     <td>
                         <%
                         
