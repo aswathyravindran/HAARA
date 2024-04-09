@@ -34,7 +34,8 @@
                     <th>Email</th>
                     <th>Contact</th>
                     <th>Address</th>
-                    <th >Action</th>
+                    <th>Proof</th>
+                    <th>Action</th>
                 </tr>
 
 
@@ -52,6 +53,8 @@
                     <td ><%=rs2.getString("furniture_owner_email")%></td>
                     <td ><%=rs2.getString("furniture_owner_contact")%></td>
                     <td ><%=rs2.getString("furniture_owner_address")%></td>
+                    <td >
+                        <a href="../Assets/Files/<%=rs2.getString("furniture_owner_proof")%>" ><img src="../Assets/Files/<%=rs2.getString("furniture_owner_proof")%>" width="120" height="120"/></a>
                     <td>
                         <%
                         
