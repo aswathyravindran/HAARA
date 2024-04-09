@@ -76,6 +76,7 @@
             <% } else if (s == 1) {
             %>
             Accept
+            <a href="FChat/Chat.jsp?fid=<%=rs.getString("furniture_owner_id")%>">Chat</a>
             <% } else {
             %>Reject<% }%>
             </td>

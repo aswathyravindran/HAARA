@@ -2,6 +2,9 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
+        <group/>
+=======
         <group>
 <<<<<<< HEAD
             <file>file:/F:/HAARA/Project/web/Admin/index.html</file>
@@ -49,5 +52,6 @@
 >>>>>>> bd93d311a75f4d94200b83f772a40a009a42de70
 >>>>>>> 6a4929c5d5dbf14cc7e0a13becc93ed514e087a0
         </group>
+>>>>>>> a11ad406b52fcef4a48747d9803fe606d7481b1c
     </open-files>
 </project-private>
