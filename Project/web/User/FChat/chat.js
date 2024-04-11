@@ -1,10 +1,10 @@
 
 var textArea = document.getElementById("msg");
-var furniture_ownerId = document.getElementById("txt_hid");
+var id = document.getElementById("txt_hid");
 
 function sendChat() {
     var msg = textArea.value;
-    var Id = furniture_ownerId.value;
+    var Id = id.value;
 
     $.ajax({
         url: "AjaxChat.jsp",
@@ -50,7 +50,7 @@ $(document).ready(function() {
 });
 
 function reloadSection() {
-    $("#conversation").load('Load.jsp?id=' + furniture_ownerId.value);
+    $("#conversation").load('Load.jsp?id=' + id.value);
     $('#conversation').animate({scrollTop: $('#conversation')[0].scrollHeight});
 }
 

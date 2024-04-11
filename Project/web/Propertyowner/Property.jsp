@@ -32,20 +32,18 @@
 //            alert("Record Saved");
 //            window.location = "property.jsp";
         </script>
-        <%
-//        } else {
-                    
+        <%//        } else {
+
         %>
         <script>
 //            alert("Failed");
 //            window.location = "property.jsp";
         </script>
-        <%
-//                }
+        <%//                }
 //            }
 
         %>
-         <%    if (request.getParameter("del") != null) {
+        <%    if (request.getParameter("del") != null) {
                 String delQry = "delete from tbl_property where property_id='" + request.getParameter("del") + "'";
                 con.executeCommand(delQry);
                 response.sendRedirect("Property.jsp");
@@ -71,8 +69,7 @@
                     <td>
                         <select name="sel_district" id="sel_district" onchange="getPlace(this.value)">
                             <option value="">-----Select------</option>
-                            <%
-                                String sel = "select * from tbl_district";
+                            <%                                String sel = "select * from tbl_district";
                                 ResultSet rs = con.selectCommand(sel);
                                 while (rs.next()) {
                             %>
@@ -98,6 +95,7 @@
                     <td>Contract Time</td>
                     <td><input type="text" name="txtprice"></td>
                 </tr>
+
                 <tr>
                     <td colspan="2" align="center">
                         <input type="submit" name="btnsubmit" value="Submit">
@@ -129,13 +127,14 @@
         <th >Price</th>
         <th >Details</th>
         <th >Contract time</th>
+        <th colspan="2">Action</th>
     </tr>
 
     <%        int i = 0;
         //here is a problem
-        String selQry1 = "select * from tbl_property p inner join tbl_property_owners d on d.property_owners_id=p.property_owners_id and p.property_owners_id='"+session.getAttribute("pid")+"'";
+        String selQry1 = "select * from tbl_property p inner join tbl_property_owners d on d.property_owners_id=p.property_owners_id and p.property_owners_id='" + session.getAttribute("pid") + "'";
         ResultSet rs1 = con.selectCommand(selQry1);
-        
+
         while (rs1.next()) {
 
             i++;
@@ -149,12 +148,13 @@
         <td ><%=rs1.getString("property_contract_time")%></td>
         <%--<td ><%=rso.getString("admin_password")%></td>
         <td ><%=rso.getString("admin_contact")%></td> --%>
-        <td ><a href="Property.jsp?del=<%=rs1.getString("property_id")%>">Delete</a></td> 
-    </tr>
-    <%                      }
+        <td ><a href="Addphoto.jsp?prid=<%=rs1.getString("property_id")%>">Add Photos</a></td>
+    <td ><a href="Property.jsp?del=<%=rs1.getString("property_id")%>">Delete</a></td> 
+</tr>
+<%                      }
 
 
-    %>
+%>
 </table>
 
 

@@ -15,8 +15,8 @@
       
     </head>
     <body>
-
-
+        <%@include file="Head.jsp" %>
+        <h2>New User</h2>
         <form name="frmNewUser" method="post" enctype="multipart/form-data" action="../Assets/ActionPages/UserUploadAction.jsp">
             <table border="2" align="center">
                 <tr>
@@ -73,12 +73,11 @@
                 <td><input type="file" name="file_photo"></td>
             </tr>
                 <tr>
-                    <td><input type="submit" value="Submit" name="btnsubmit"></td>
-                    <td><input type="reset" value="Reset" name="btnreset"></td>
+                    <td colspan="2" align="center"><input type="submit" value="Submit" name="btnsubmit"></td>
                 </tr>
             </table>
         </form>
-
+                        <%@include file="Foot.jsp" %>
     </body>
     <script src="../Assets/JQuery/jQuery.js"></script>
     <script>

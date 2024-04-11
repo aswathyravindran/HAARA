@@ -24,18 +24,18 @@
             <link rel="stylesheet" href="../../Assets/friendskit/assets/css/core.css">
 
         </head>
-  
-    <body>
 
-        <!-- Pageloader -->
-        <div class="pageloader"></div>
-        <div class="infraloader is-active"></div>
+        <body>
 
-        <div class="chat-wrapper is-standalone">
-            <div class="chat-inner">
+            <!-- Pageloader -->
+            <div class="pageloader"></div>
+            <div class="infraloader is-active"></div>
+
+            <div class="chat-wrapper is-standalone">
+                <div class="chat-inner">
 
                 <%
-                    String selQr = "select * from tbl_furniture_owner where furniture_owner_id='" + request.getParameter("fid") + "'";
+                    String selQr = "select * from tbl_property_owners where property_owners_id='" + request.getParameter("id") + "'";
                     ResultSet rs = con.selectCommand(selQr);
                     rs.next();
 
@@ -47,10 +47,10 @@
                     <div class="nav-start">
                         <div class="recipient-block">
                             <div class="avatar-container">
-                                <img class="furniture_owner-avatar" style="width: 42px; height:42px " src="../../Assets/Files/<%=rs.getString("furniture_owner_photo")%>" alt="">
+                                <img class="property_owner-avatar" style="width: 42px; height:42px " src="../../Assets/Files/<%=rs.getString("property_owners_photo")%>" alt="">
                             </div>
-                            <div class="furniture_ownername">
-                                <span><%=rs.getString("furniture_owner_name")%></span>
+                            <div class="property_ownername">
+                                <span><%=rs.getString("property_owners_name")%></span>
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                 </div>
 
                 <!-- Chat sidebar -->
-                <div id="chat-sidebar" class="furniture_owners-sidebar">   
+                <div id="chat-sidebar" class="property_owners-sidebar">   
                     <!-- User list -->
 
                 </div>
@@ -83,7 +83,7 @@
                                 <input type="button" value="Send" name="btn_send"  id="btn_send" onclick="sendChat()"
                                        style="border: none;background-color: #5082c3;border-radius: 15px 10px; color: white;
                                        margin: 10px; margin-bottom: 30px ; width: 30%; height: 25px">
-                                <input type="hidden" name="txt_hid" id="txt_hid" value="<%=request.getParameter("fid")%>"/>
+                                <input type="hidden" name="txt_hid" id="txt_hid" value="<%=request.getParameter("id")%>"/>
 
                             </div>
                         </div>
@@ -94,7 +94,7 @@
             </div>
         </div>
         <script src="../../Assets/JQuery/jQuery.js"></script>
-         
+
         <script src="chat.js"></script>
         <!-- Concatenated js plugins and jQuery -->
         <script src="../../Assets/friendskit/assets/js/app.js"></script>
@@ -121,7 +121,7 @@
         <script src="../../Assets/friendskit/assets/js/explorer.js"></script>
         <script src="../../Assets/friendskit/assets/js/widgets.js"></script>
         <script src="../../Assets/friendskit/assets/js/modal-uploader.js"></script>
-        <script src="../../Assets/friendskit/assets/js/popovers-furniture_owners.js"></script>
+        <script src="../../Assets/friendskit/assets/js/popovers-property_owners.js"></script>
         <script src="../../Assets/friendskit/assets/js/popovers-pages.js"></script>
         <script src="../../Assets/friendskit/assets/js/lightbox.js"></script>
 

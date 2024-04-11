@@ -6,16 +6,17 @@
 
 <%@page import="java.sql.ResultSet"%>
 <jsp:useBean class="DB.ConnectionClass" id="con"></jsp:useBean>
-    
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%@include file="Head.jsp" %>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>District</title>
     </head>
     <body>
-      
+
         <%-- //submit--%>
         <%
 
@@ -40,10 +41,10 @@
             }
 
         %>
-        
+
         <%-- //delete --%>
-        
-        
+
+
         <%    if (request.getParameter("del") != null) {
                 String delQry = "delete from tbl_district where district_id='" + request.getParameter("del") + "'";
                 con.executeCommand(delQry);
@@ -51,22 +52,22 @@
             }
 
         %>
-        
-    <form method="post" name="district">
-        <table border="2" align="center">
-            <td>District</td>
-            <td>
-                <input type="text" name="txtname" placeholder="Enter district" required="">
-            </td>
-            </tr>
-            <tr>
-                <td colspan="2" align="center">
-                    <input type="Submit"  name="btnsubmit" value="submit">
-                    <input type="reset"  name="btncancel" value="Cancel">
+
+        <form method="post" name="district">
+            <table border="2" align="center">
+                <td>District</td>
+                <td>
+                    <input type="text" name="txtname" placeholder="Enter district" required="">
                 </td>
-            </tr>
-        </table>
-    </form>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="Submit"  name="btnsubmit" value="submit">
+                        <input type="reset"  name="btncancel" value="Cancel">
+                    </td>
+                </tr>
+            </table>
+        </form>
     </body>
 </html>
 
@@ -101,3 +102,4 @@
 
 
 </table>
+    <%@include file="Foot.jsp" %>

@@ -1,7 +1,7 @@
 <jsp:useBean class="DB.ConnectionClass" id="con"></jsp:useBean>
 <%
 
-    String insQry="update tbl_furniture_owner_user_chat set chat_content='This message was Deleted' where chat_id='"+request.getParameter("tid") +"'";
+    String insQry="update tbl_property_owner_user_chat set chat_content='This message was Deleted' where chat_id='"+request.getParameter("tid") +"'";
     if(con.executeCommand(insQry))
     {
         out.println("updated");

@@ -1,7 +1,7 @@
 <jsp:useBean class="DB.ConnectionClass" id="con"></jsp:useBean>
 <%
 
-    String insQry="insert into tbl_furniture_owner_user_chat (from_furniture_owner_id,to_user_id,chat_content,chat_date) values('"+session.getAttribute("fid")+"','"+request.getParameter("id") +"','"+request.getParameter("chat") +"',DATE_FORMAT(sysdate(), '%M %d %Y, %h:%i %p'))";
+    String insQry="insert into tbl_property_owner_user_chat (to_property_owner_id,from_user_id,chat_content,chat_date) values('"+request.getParameter("id") +"','"+session.getAttribute("uid")+"','"+request.getParameter("chat") +"',DATE_FORMAT(sysdate(), '%M %d %Y, %h:%i %p'))";
     if(con.executeCommand(insQry))
     {
         out.println("sended");

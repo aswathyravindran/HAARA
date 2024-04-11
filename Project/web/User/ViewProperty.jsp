@@ -39,8 +39,8 @@
                 </tr>
             </table>
             <table id="tblViewprop">
-              
-            </table>
+
+        </table>
         </form>
     </body>
     <script src="../Assets/JQuery/jQuery.js"></script>

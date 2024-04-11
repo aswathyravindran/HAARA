@@ -35,7 +35,7 @@
             <div class="chat-inner">
 
                 <%
-                    String selQr = "select * from tbl_furniture_owner where furniture_owner_id='" + request.getParameter("fid") + "'";
+                    String selQr = "select * from tbl_furniture_owner where furniture_owner_id='" + request.getParameter("id") + "'";
                     ResultSet rs = con.selectCommand(selQr);
                     rs.next();
 
@@ -83,7 +83,7 @@
                                 <input type="button" value="Send" name="btn_send"  id="btn_send" onclick="sendChat()"
                                        style="border: none;background-color: #5082c3;border-radius: 15px 10px; color: white;
                                        margin: 10px; margin-bottom: 30px ; width: 30%; height: 25px">
-                                <input type="hidden" name="txt_hid" id="txt_hid" value="<%=request.getParameter("fid")%>"/>
+                                <input type="hidden" name="txt_hid" id="txt_hid" value="<%=request.getParameter("id")%>"/>
 
                             </div>
                         </div>
