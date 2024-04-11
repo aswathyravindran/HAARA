@@ -85,6 +85,19 @@
             }
 
         }
+
+        if (! value[3].equals(value[4]))  {
+            %> 
+<script type="text/javascript">
+    alert("Passwords do not match");
+    setTimeout(function() {
+        window.location.href = '../../Guest/NewUser.jsp'
+    }, 40);//40millisecend it go to next page
+</script>
+<%
+        }
+        else{
+
         String InsQry = "insert into tbl_user (user_name,user_contact,user_email,user_password,place_id,user_address,user_proof,user_photo)"
                 + "values('" + value[0] + "','" + value[1] + "','" + value[2] + "','" + value[3] + "','" + value[5] + "','" + value[6] + "','" + photo + "','" + photo + "')";
 
@@ -101,6 +114,6 @@
 </script>
 <%
         }
-    }
+    } }
 
 %>

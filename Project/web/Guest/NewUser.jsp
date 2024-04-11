@@ -32,9 +32,21 @@
                 <td><input type="text" name="email" placeholder="enter email"></td>
             </tr>
             <tr>
+<!--                <td>Password</td>
+                <td><input type="password" name="txtpwd" placeholder="enter password"></td>-->
+                
                 <td>Password</td>
-                <td><input type="password" name="txtpwd" placeholder="enter password"></td>
+            <td><input type="text" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required name="txtpwd" /></td>
+
+                
             </tr>
+            
+            <tr>
+            <td>Re-Password</td>
+            <td><input type="password" required name="txt_repass" /></td>
+          </tr>
+
+            
             <tr>
                 <td>District</td>
                 <td>
@@ -78,7 +90,8 @@
                 </tr>
             </table>
         </form>
-
+                   
+        
     </body>
     <script src="../Assets/JQuery/jQuery.js"></script>
     <script>
