@@ -15,20 +15,21 @@
             <th >User Name</th>
             <th >Property Details</th>
         </tr>
-    
+
 
     <%        int i = 0;
-        if (request.getParameter("ac")!=null){
-            String s="update tbl_request set request_status=1 where request_id='"+request.getParameter("ac")+"'";
-             con.executeCommand(s);
+        if (request.getParameter("ac") != null) {
+            String s = "update tbl_request set request_status=1 where request_id='" + request.getParameter("ac") + "'";
+            con.executeCommand(s);
+            response.sendRedirect("ViewRequest.jsp");
+        } else if (request.getParameter("rj") != null) {
+            String s = "update tbl_request set request_status=2 where request_id='" + request.getParameter("rj") + "'";
+            boolean st = con.executeCommand(s);
+            if (st) {
                 response.sendRedirect("ViewRequest.jsp");
-        }else if (request.getParameter("rj")!=null){
-            String s="update tbl_request set request_status=2 where request_id='"+request.getParameter("rj")+"'";
-             boolean st=con.executeCommand(s);
-             if(st){
-                response.sendRedirect("ViewRequest.jsp");
-        } }
-        String selQry1 = "select * from tbl_request r ,tbl_property p , tbl_user u where p.property_id=r.property_id and r.user_id='" + session.getAttribute("uid") + "' and u.user_id=r.user_id ";
+            }
+        }
+        String selQry1 = "select * from tbl_request r inner join tbl_property f on f.property_id=r.property_id inner join tbl_property_owners fo on fo.property_owners_id=f.property_owners_id inner join tbl_user u on u.user_id=r.user_id where fo.property_owners_id='" + session.getAttribute("pid") + "'";
         ResultSet rs1 = con.selectCommand(selQry1);
 
         while (rs1.next()) {
@@ -48,12 +49,13 @@
             Accept
             <% } else {
             %>Reject<% }%>
-            </td>
+        </td>
         <td ><%=rs1.getString("user_name")%></td>
         <td ><%=rs1.getString("property_details")%></td>
 
-        <td ><a href="ViewRequest.jsp?ac=<%=rs1.getString("request_id")%>">Accept</a></td> 
-         <td ><a href="ViewRequest.jsp?rj=<%=rs1.getString("request_id")%>">Reject</a></td> 
+        <td><a href="ViewRequest.jsp?ac=<%=rs1.getString("request_id")%>">Accept</a></td> 
+        <td><a href="ViewRequest.jsp?rj=<%=rs1.getString("request_id")%>">Reject</a></td> 
+        <td><a href="PChat/Chat.jsp?id=<%=rs1.getString("user_id")%>">Chat</a></td> 
     </tr>
     <%                      }
 

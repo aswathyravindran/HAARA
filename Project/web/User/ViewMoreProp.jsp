@@ -15,26 +15,24 @@
         <title>Property</title>
     </head>
     <body>
-             <%
-          if (request.getParameter("btnwish") != null) {
-               String insQry1="insert into tbl_wishlist(user_id,property_id)values('" + session.getAttribute("uid") + "','" + request.getParameter("pid") + "') ";
-                 if (con.executeCommand(insQry1)) {
+        <%
+            if (request.getParameter("btnwish") != null) {
+                String insQry1 = "insert into tbl_wishlist(user_id,property_id)values('" + session.getAttribute("uid") + "','" + request.getParameter("pid") + "') ";
+                if (con.executeCommand(insQry1)) {
         %>
         <script>
             alert("Added to wishlist");
             window.location = "ViewMoreProp.jsp";
         </script>
         <%
-        
-            }else { out.print(insQry1); } }
-        
-        
+            } else {
+                out.print(insQry1);
+            }
+        } else if (request.getParameter("btnreq") != null) {
 
-            else if (request.getParameter("btnreq") != null) {
+            String insQry = "insert into tbl_request(request_date,request_status,user_id,property_id)values(CURDATE(),'" + 0 + "','" + session.getAttribute("uid") + "','" + request.getParameter("pid") + "') ";
 
-                String insQry = "insert into tbl_request(request_date,request_status,user_id,property_id)values(CURDATE(),'" + 0 + "','" + session.getAttribute("uid") + "','" + request.getParameter("pid") + "') ";
-
-                if (con.executeCommand(insQry)) {
+            if (con.executeCommand(insQry)) {
         %>
         <script>
             alert("Record Saved");
@@ -108,8 +106,7 @@
                 <tr>
                     <td colspan="2">
                         <input type="submit" value="Wishlist" name="btnwish">
-
-                       
+                        <a href="ViewPhotos.jsp?prid=<%=rs3.getString("property_id")%>">View More Photos</a>
                         <input type="submit" value="Request" name="btnreq">
                     </td>
                 </tr>

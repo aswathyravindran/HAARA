@@ -30,7 +30,7 @@
                 response.sendRedirect("ViewRequests.jsp");
             }
         }
-        String selQry1 = "select * from tbl_request r ,tbl_furniture p , tbl_user u where p.furniture_id=r.furniture_id and r.user_id='" + session.getAttribute("uid") + "' and u.user_id=r.user_id ";
+        String selQry1 = "select * from tbl_request r inner join tbl_furniture f on f.furniture_id=r.furniture_id inner join tbl_furniture_owner fo on fo.furniture_owner_id=f.furniture_owner_id inner join tbl_user u on u.user_id=r.user_id where fo.furniture_owner_id='" + session.getAttribute("fid") + "'";
         ResultSet rs1 = con.selectCommand(selQry1);
 
         while (rs1.next()) {
@@ -62,6 +62,8 @@
             %>
 
             <a href="ViewRequests.jsp?rj=<%=rs1.getString("request_id")%>">Reject</a>
+            <a href="FChat/Chat.jsp?id=<%=rs1.getString("user_id")%>">Chat</a>
+            
             <% } else {
             %><a href="ViewRequests.jsp?ac=<%=rs1.getString("request_id")%>">Accept</a>
             <% }%>

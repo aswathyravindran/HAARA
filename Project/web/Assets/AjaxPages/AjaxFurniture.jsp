@@ -28,6 +28,8 @@
 </tr>
 <tr align="right">
     <td colspan="4"><a href="ViewMoreFur.jsp?fid=<%=rs.getString("furniture_id")%>">View More</a></td>
+         <td colspan="4"><a href="FurnitureReview.jsp?id=<%=rs.getString("furniture_id")%>">Review</a></td>
+
 </tr>
 <%
 }
