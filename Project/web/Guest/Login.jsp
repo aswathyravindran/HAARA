@@ -1,4 +1,4 @@
-^<%-- 
+<%-- 
     Document   : Login.jsp
     Created on : 18 Mar, 2024, 5:20:28 PM
     Author     : Admin
@@ -76,6 +76,7 @@
                         <p>Password</p>
                         <input type="Password" name="txtpassword" >
                         <input type="submit" name="btnsubmit" value="LogIn">
+                        
                         <!--<a href="#">Forgot Password</a>-->
                     </form>
                 </div>

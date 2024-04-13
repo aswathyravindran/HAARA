@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Nest Bootstrap Template</title>
+        <title>Propert Owner Homepage</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -31,7 +31,7 @@
     <body>
 
         <div class="click-closed"></div>
-   
+
 
         <!--/ Nav Star /-->
         <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
@@ -50,20 +50,26 @@
                 <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="../Assets/Templates/Main/index.html">Home</a>
+                            <a class="nav-link active" href="PhomePage.jsp">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../Assets/Templates/Main/about.html">About</a>
+                            <a class="nav-link" href="../Guest/about.html">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../Assets/Templates/Main/property-grid.html">Property</a>
+                            <a class="nav-link" href="Property.jsp">Property</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../Assets/Templates/Main/blog-grid.html">Furniture</a>
+                            <a class="nav-link" href="ViewRequest.jsp">View Request</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Pprofile.jsp">My Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">SignOut</a>
                         </li>
                     </ul>
                 </div>
-              
+
             </div>
         </nav>
         <!--/ Nav End /-->

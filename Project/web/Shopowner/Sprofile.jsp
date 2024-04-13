@@ -15,6 +15,7 @@
         <title>MY PROFILE</title>
     </head>
     <body>
+        <%@include file="Head.jsp" %>
         <%if (request.getParameter("btnsubmit") != null) {
                 response.sendRedirect("../Shopowner/SeditProfile.jsp");
             } else if (request.getParameter("change Password") != null) {
@@ -60,8 +61,6 @@
                 </tr>
                 <tr><td colspan="2"> <input type="submit" name="btnedit" value="Edit Profile">
                         <input type="submit" value="ChangePassword" name="change Password" >
-                        <input type="submit" value="Home" name="btnhome">
-                        <input type="submit" value="View Request" name="btnrequest">
                     </td>
                 </tr>
                 <tr>
@@ -70,5 +69,6 @@
             </table>
             <% }%>
         </form>
+            <%@include file="Foot.jsp" %>
     </body>
 </html>

@@ -15,6 +15,7 @@
         <title>EDIT PROFILE</title>
     </head>
     <body>
+        <%@include file="Head.jsp" %>
         <%if (request.getParameter("btnsubmit")!=null){
             String email = request.getParameter("txtemail");
             String name = request.getParameter("txtname");
@@ -59,5 +60,6 @@
             </table>
            <% }%>
         </form>
+           <%@include file="Foot.jsp" %>
     </body>
 </html>

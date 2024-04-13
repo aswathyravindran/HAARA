@@ -15,7 +15,7 @@
         <title>Add Photos</title>
     </head>
     <body>
-
+        <%@include file="Head.jsp" %>
         <%-- //delete --%>
 
 
@@ -27,7 +27,7 @@
 
         %>
 
-        <form method="post" name="frmAddphoto" enctype="multipart/form-data" action="../Assets/ActionPages/PropertyPhotoUploadAction.jsp?prid=<%=request.getParameter("prid")%>">
+        <form method="post" name="frmAddphoto" enctype="multipart/form-data" action="../Assets/ActionPages/PPhotoUploadAction.jsp?prid=<%=request.getParameter("prid")%>">
             <table border="2" align="center">
                 <tr>
                     <td>Image</td>
@@ -49,6 +49,7 @@
             </table>
         </form>
     </body>
+    <%@include file="Foot.jsp" %>
 </html>
 
 <%--to show the table in the page--%>

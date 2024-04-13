@@ -85,7 +85,7 @@
             }
 
         }
-        String InsQry = "insert into tbl_photo(photo_caption,photo_image,property_id) values('" + value[0] + "','" + photo + "','"+request.getParameter("prid")+"')";
+        String InsQry = "insert into tbl_photo(photo_caption,photo_image,furniture_id) values('" + value[0] + "','" + photo + "','"+request.getParameter("prid")+"')";
 
         System.out.println(InsQry);
         boolean status = obj.executeCommand(InsQry);
@@ -95,7 +95,7 @@
 <script type="text/javascript">
     alert("Photo Uploaded Successfully");
     setTimeout(function() {
-        window.location.href = '../../Propertyowner/Property.jsp';
+        window.location.href = '../../Shopowner/Furniture.jsp';
     }, 40);//40millisecend it go to next page
 </script>
 <%

@@ -15,6 +15,7 @@
         <title>Property</title>
     </head>
     <body>
+        <%@include file="Head.jsp" %>
         <%
             if (request.getParameter("btnwish") != null) {
                 String insQry1 = "insert into tbl_wishlist(user_id,property_id)values('" + session.getAttribute("uid") + "','" + request.getParameter("pid") + "') ";
@@ -105,8 +106,8 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <input type="submit" value="Wishlist" name="btnwish">
                         <a href="ViewPhotos.jsp?prid=<%=rs3.getString("property_id")%>">View More Photos</a>
+                        <input type="submit" value="Wishlist" name="btnwish">
                         <input type="submit" value="Request" name="btnreq">
                     </td>
                 </tr>
@@ -114,5 +115,6 @@
             </table>
             <% }%>
         </form>
+            <%@include file="Foot.jsp" %>
     </body>
 </html>

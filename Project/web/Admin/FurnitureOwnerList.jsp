@@ -13,6 +13,7 @@
         <title>Furniture Owners</title>
     </head>
     <body>
+        <%@include file="Head.jsp" %>
         <%   if (request.getParameter("ac") != null) {
                 String s = "update tbl_furniture_owner set furniture_owner_status=1 where furniture_owner_id='" + request.getParameter("ac") + "'";
                 con.executeCommand(s);
@@ -90,5 +91,6 @@
 
             </table>
         </form>
+                <%@include file="Foot.jsp" %>
     </body>
 </html>

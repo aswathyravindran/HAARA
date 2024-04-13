@@ -15,6 +15,7 @@
         <title>Complaint page</title>
     </head>
     <body>
+        <%@include file="Head.jsp" %>
         <%
             if (request.getParameter("btnsubmit") != null) {
                 String s = "insert into tbl_complaint(complaint_content,user_id) values('" + request.getParameter("txtdesc") + "','" + session.getAttribute("uid") + "')";
@@ -68,5 +69,6 @@
                 %>
             </table>
         </form>
+                <%@include file="Foot.jsp" %>
     </body>
 </html>

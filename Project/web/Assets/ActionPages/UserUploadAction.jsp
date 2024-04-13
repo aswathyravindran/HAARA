@@ -109,7 +109,7 @@
 <script type="text/javascript">
     alert("Registration Completed");
     setTimeout(function() {
-        window.location.href = '../../Guest/NewUser.jsp'
+        window.location.href = '../../Guest/Login.jsp'
     }, 40);//40millisecend it go to next page
 </script>
 <%

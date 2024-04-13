@@ -14,9 +14,8 @@
         <title>Customer Complaints</title>
     </head>
     <body>
+        <%@include file="Head.jsp" %>
         <table border="1" align="center">  
-
-
     <tr >
         <th >Sl.No</th>
         <th >Complaint</th>
@@ -47,10 +46,8 @@
 
 
     %>
-
-
 </table>
-
+    <%@include file="Foot.jsp" %>
     </body>
 </html>
 

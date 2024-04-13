@@ -29,12 +29,23 @@
     </head>
 
     <body>
-<<<<<<< HEAD
+<!--<<<<<<< HEAD-->
+<%@include file="Head.jsp" %>
 
-        <div class="click-closed"></div>
+<form name="frmMyprofile" method="post">
+        <h1>Hello <%=session.getAttribute("uname")%></h1>
+<!--        <a href="ViewProperty.jsp">Property</a>
+        <a href="ViewFurniture.jsp">Furniture</a>
+        <a href="UViewRequest.jsp">Request Status</a>
+        <a href="Complaint.jsp">Have any complaints?</a>
+         <a href="Wishlist.jsp">Wishlist</a>
+         <a href="MyProfile.jsp">My Profile</a>-->
+        </form>
+
+<!--        <div class="click-closed"></div>
    
 
-        <!--/ Nav Star /-->
+        / Nav Star /
         <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
             <div class="container">
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
@@ -67,13 +78,13 @@
               
             </div>
         </nav>
-        <!--/ Nav End /-->
+        / Nav End /-->
 
         <!--/ Carousel Star /-->
         <div class="intro intro-carousel">
             <div id="carousel" class="owl-carousel owl-theme">
                 <div class="carousel-item-a intro-item bg-image" style="background-image: url(../Assets/Templates/Main/img/slide-1.jpg)">
-                    <div class="overlay overlay-a"></div>
+<!--                    <div class="overlay overlay-a"></div>
                     <div class="intro-content display-table">
                         <div class="table-cell">
                             <div class="container">
@@ -91,13 +102,13 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item-a intro-item bg-image" style="background-image: url(../Assets/Templates/Main/img/slide-2.jpg)">
                     <div class="overlay overlay-a"></div>
-                    <div class="intro-content display-table">
+<!--                    <div class="intro-content display-table">
                         <div class="table-cell">
                             <div class="container">
                                 <div class="row">
@@ -116,11 +127,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
                 <div class="carousel-item-a intro-item bg-image" style="background-image: url(../Assets/Templates/Main/img/slide-3.jpg)">
                     <div class="overlay overlay-a"></div>
-                    <div class="intro-content display-table">
+<!--                    <div class="intro-content display-table">
                         <div class="table-cell">
                             <div class="container">
                                 <div class="row">
@@ -140,7 +151,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
         <!--/ Carousel end /-->
@@ -680,9 +691,9 @@
                             <div class="w-footer-a">
                                 <ul class="list-unstyled">
                                     <li class="color-a">
-                                        <span class="color-text-a">Phone .</span> nest143@.com</li>
+                                        <span class="color-text-a">Phone .</span>+91 79071 64735</li>
                                     <li class="color-a">
-                                        <span class="color-text-a">Email .</span> +91 79071 64735</li>
+                                        <span class="color-text-a">Email .</span>nest143@.com</li>
                                 </ul>
                             </div>
                         </div>
@@ -765,9 +776,9 @@
                                             <li class="list-inline-item">
                                                 <a href="#">Property</a>
                                             </li>
-                                            <li class="list-inline-item">
+<!--                                            <li class="list-inline-item">
                                                 <a href="#">Blog</a>
-                                            </li>
+                                            </li>-->
                                             <li class="list-inline-item">
                                                 <a href="#">Contact</a>
                                             </li>
@@ -815,7 +826,7 @@
                                           Licensing information: https://bootstrapmade.com/license/
                                           Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=EstateAgency
                                         -->
-                                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+<!--                                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>-->
                                     </div>
                                 </div>
                             </div>
@@ -824,7 +835,7 @@
                     <!--/ Footer End /-->
 
                     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-                    <div id="preloader"></div>
+                   
 
                     <!-- JavaScript Libraries -->
                     <script src="../Assets/Templates/Main/lib/jquery/jquery.min.js"></script>
@@ -842,26 +853,13 @@
 
                     </body>
                     </html>
-=======
+
         <%if (request.getParameter("btnmyprofile") != null) {
             response.sendRedirect("../User/MyProfile.jsp");
         }
         %>
-        <form name="frmMyprofile" method="post">
-        <h1>Hello <%=session.getAttribute("uname")%></h1>
-        <a href="ViewProperty.jsp">Property</a>
-        <a href="ViewFurniture.jsp">Furniture</a>
-        <a href="UViewRequest.jsp">Request Status</a>
-        <a href="Complaint.jsp">Have any complaints?</a>
-<<<<<<< HEAD
-         <a href="Wishlist.jsp">Wishlist</a>
-         <a href="MyProfile.jsp">My Profile</a>
-<!--        <input type="submit" name="btnmyprofile" value="My Profile">-->
-=======
-        <a href="Wishlist.jsp">Wishlist</a>
-        <a href="MyProfile.jsp">My Profile</a>
->>>>>>> 8af21d62354ffe3733d253c3af98fe44409bf8c5
-        </form>
+        
+        <%@include file="Foot.jsp" %>
     </body>
 </html>
->>>>>>> 725884bafdc6c07e700b5830968bfb5e31bfc285
+
