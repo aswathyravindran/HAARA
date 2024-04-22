@@ -29,7 +29,7 @@
     </head>
 
     <body>
-<<<<<<< HEAD
+<!--<<<<<<< HEAD-->
 
         <div class="click-closed"></div>
    
@@ -842,7 +842,6 @@
 
                     </body>
                     </html>
-=======
         <%if (request.getParameter("btnmyprofile") != null) {
             response.sendRedirect("../User/MyProfile.jsp");
         }
@@ -853,15 +852,10 @@
         <a href="ViewFurniture.jsp">Furniture</a>
         <a href="UViewRequest.jsp">Request Status</a>
         <a href="Complaint.jsp">Have any complaints?</a>
-<<<<<<< HEAD
+<!--<<<<<<< HEAD-->
          <a href="Wishlist.jsp">Wishlist</a>
          <a href="MyProfile.jsp">My Profile</a>
 <!--        <input type="submit" name="btnmyprofile" value="My Profile">-->
-=======
-        <a href="Wishlist.jsp">Wishlist</a>
-        <a href="MyProfile.jsp">My Profile</a>
->>>>>>> 8af21d62354ffe3733d253c3af98fe44409bf8c5
         </form>
     </body>
 </html>
->>>>>>> 725884bafdc6c07e700b5830968bfb5e31bfc285

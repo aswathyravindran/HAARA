@@ -89,12 +89,12 @@
                 </tr>
             </table>
         </form>
-<<<<<<< HEAD
+<!--<<<<<<< HEAD-->
                         <%@include file="Foot.jsp" %>
-=======
+<!--=======-->
                    
         
->>>>>>> 725884bafdc6c07e700b5830968bfb5e31bfc285
+<!-->>>>>>> 725884bafdc6c07e700b5830968bfb5e31bfc285-->
     </body>
     <script src="../Assets/JQuery/jQuery.js"></script>
     <script>
