@@ -1,7 +1,7 @@
 <%-- 
-    Document   : Addphoto
-    Created on : 10 Apr, 2024, 12:31:18 PM
-    Author     : Elna Thankachan
+    Document   : AddPhoto
+    Created on : 13 Apr, 2024, 11:41:43 AM
+    Author     : Admin
 --%>
 
 <%@page import="java.sql.ResultSet"%>
@@ -22,12 +22,12 @@
         <%    if (request.getParameter("del") != null) {
                 String delQry = "delete from tbl_photo where photo_id='" + request.getParameter("del") + "'";
                 con.executeCommand(delQry);
-                response.sendRedirect("Addphoto.jsp");
+                response.sendRedirect("AddPhoto.jsp");
             }
 
         %>
 
-        <form method="post" name="frmAddphoto" enctype="multipart/form-data" action="../Assets/ActionPages/PPhotoUploadAction.jsp?prid=<%=request.getParameter("prid")%>">
+        <form method="post" name="frmAddphoto" enctype="multipart/form-data" action="../Assets/ActionPages/FPhotoUploadAction.jsp?prid=<%=request.getParameter("prid")%>">
             <table border="2" align="center">
                 <tr>
                     <td>Image</td>
@@ -49,7 +49,6 @@
             </table>
         </form>
     </body>
-    <%@include file="Foot.jsp" %>
 </html>
 
 <%--to show the table in the page--%>
@@ -65,7 +64,7 @@
 
 
     <%        int i = 0;
-        String selQry = "select * from tbl_photo where property_id='" + request.getParameter("prid") + "'";
+        String selQry = "select * from tbl_photo where furniture_id='" + request.getParameter("prid") + "'";
         ResultSet rs = con.selectCommand(selQry);
         while (rs.next()) {
 
@@ -86,3 +85,4 @@
 
 
 </table>
+    <%@include file="Foot.jsp" %>

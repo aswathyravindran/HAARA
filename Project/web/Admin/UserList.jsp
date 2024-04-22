@@ -14,6 +14,7 @@
         <title>User List</title>
     </head>
     <body>
+        <%@include file="Head.jsp" %>
         <%    if (request.getParameter("del") != null) {
                 String delQry = "delete from tbl_user where user_id='" + request.getParameter("del") + "'";
                 con.executeCommand(delQry);
@@ -59,5 +60,6 @@
         </table>
 
         </form>
+            <%@include file="Foot.jsp" %>
     </body>
 </html>

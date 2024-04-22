@@ -6,15 +6,15 @@
 
 <%@page import="java.sql.ResultSet"%>
 <jsp:useBean class="DB.ConnectionClass" id="con"></jsp:useBean>
-
-    <table border="1" align="center">
-        <tr >
-            <th >Sl.No</th>
-            <th >Date</th>
-            <th >Status</th>
-            <th >User Name</th>
-            <th >Property Details</th>
-        </tr>
+<%@include file="Head.jsp" %>
+<table border="1" align="center">
+    <tr >
+        <th >Sl.No</th>
+        <th >Date</th>
+        <th >Status</th>
+        <th >User Name</th>
+        <th >Property Details</th>
+    </tr>
 
 
     <%        int i = 0;
@@ -62,3 +62,4 @@
 
     %>
 </table>
+<%@include file="Foot.jsp" %>

@@ -14,7 +14,8 @@
         <title>Pownerlist</title>
     </head>
     <body>
-        <%    
+        <%@include file="Head.jsp" %>
+        <%
             if (request.getParameter("ac") != null) {
                 String s = "update tbl_property_owners set property_owners_status=1 where property_owners_id='" + request.getParameter("ac") + "'";
                 con.executeCommand(s);
@@ -61,7 +62,7 @@
                     </td>
                     <td>
                         <%
-                        
+
                             if (rs1.getString("property_owners_status").equals("0")) {
                         %>
                         <a href="PropertyOwnerList.jsp?ac=<%=rs1.getString("property_owners_id")%>">Accept</a>
@@ -71,13 +72,11 @@
 
                         <a href="PropertyOwnerList.jsp?rj=<%=rs1.getString("property_owners_id")%>">Reject</a>                        
                         <%
-                                }
-                            else if(rs1.getString("property_owners_status").equals("2"))
-                                    {
+                        } else if (rs1.getString("property_owners_status").equals("2")) {
                         %>
                         <a href="PropertyOwnerList.jsp?ac=<%=rs1.getString("property_owners_id")%>">Accept</a>
-                        <% 
-                    }%>
+                        <%
+                            }%>
                     </td>
                 </tr>
                 <%                      }
@@ -86,5 +85,6 @@
                 %>
             </table>
         </form>
+        <%@include file="Foot.jsp" %>
     </body>
 </html>

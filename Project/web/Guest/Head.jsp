@@ -51,20 +51,26 @@
                 <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="../Assets/Templates/Main/index.html">Home</a>
+                            <a class="nav-link active" href="../index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../Assets/Templates/Main/about.html">About</a>
+                            <a class="nav-link" href="about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../Assets/Templates/Main/property-grid.html">Property</a>
+                            <a class="nav-link" href="PropertyOwner.jsp">Property Owner</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../Assets/Templates/Main/blog-grid.html">Furniture</a>
+                            <a class="nav-link" href="FurnitureOwner.jsp">Furniture Owner</a>
+                        </li>
+                         <li class="nav-item">
+                             <a class="nav-link" href="NewUser.jsp">User</a>
+                        </li>
+                         <li class="nav-item">
+                             <a class="nav-link" href="Login.jsp">SignIn</a>
                         </li>
                     </ul>
                 </div>
-              
+             
             </div>
         </nav>
         <!--/ Nav End /-->

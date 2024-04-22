@@ -43,7 +43,7 @@
                     <span></span>
                     <span></span>
                 </button>
-                <a class="navbar-brand text-brand" href="../Assets/Templates/Main/index.html">Nest<span class="color-b"></span></a>
+                <a class="navbar-brand text-brand" href="../Assets/Templates/Main/index.html">NE<span class="color-b">ST</span></a>
                 <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
                         data-target="#navbarTogglerDemo01" aria-expanded="false">
                     <span class="fa fa-search" aria-hidden="true"></span>
@@ -51,16 +51,22 @@
                 <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="../Assets/Templates/Main/index.html">Home</a>
+                            <a class="nav-link active" href="PhomePage.jsp">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../Assets/Templates/Main/about.html">About</a>
+                            <a class="nav-link" href="../Guest/about.html">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../Assets/Templates/Main/property-grid.html">Property</a>
+                            <a class="nav-link" href="Property.jsp">Property</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../Assets/Templates/Main/blog-grid.html">Furniture</a>
+                            <a class="nav-link" href="ViewRequest.jsp">View Request</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Pprofile.jsp">My Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">SignOut</a>
                         </li>
                     </ul>
                 </div>

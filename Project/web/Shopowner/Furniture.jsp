@@ -17,6 +17,7 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <%@include file="Head.jsp" %>
         <%
 
 //            if (request.getParameter("btnsubmit") != null) {
@@ -128,6 +129,7 @@
         <th >Price</th>
         <th >Details</th>
         <th >Contract time</th>
+        <th >Action</th>
     </tr>
 
     <%        int i = 0;
@@ -148,6 +150,7 @@
         <td ><%=rs1.getString("furniture_contract_time")%></td>
         <%--<td ><%=rso.getString("admin_password")%></td>
         <td ><%=rso.getString("admin_contact")%></td> --%>
+        <td ><a href="AddPhoto.jsp?prid=<%=rs1.getString("furniture_id")%>">Add Photos</a></td>
         <td ><a href="Furniture.jsp?del=<%=rs1.getString("furniture_id")%>">Delete</a></td> 
     </tr>
     <%                      }
@@ -155,3 +158,4 @@
 
     %>
 </table>
+    <%@include file="Foot.jsp" %>

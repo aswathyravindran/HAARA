@@ -14,11 +14,13 @@
         <title>Admin Reply</title>
     </head>
     <body>
+        <%@include file="Head.jsp" %>
         <%
             String selQry = "select * from tbl_complaint c inner join tbl_user u on u.user_id=c.user_id";
             ResultSet rs = con.selectCommand(selQry);
             if (request.getParameter("btnsubmit") != null) {
-                String s = "update tbl_complaint set complaint_reply='" + request.getParameter("txtreply") + "',complaint_status='1' where '" + request.getParameter("cid") + "'";
+                String s = "update tbl_complaint set complaint_reply='" + request.getParameter("txtreply") + "',complaint_status='1' where complaint_id = '" + request.getParameter("cid") + "'";
+                out.print(s);
                 boolean status = con.executeCommand(s);
 
                 if (status) {
@@ -39,7 +41,7 @@
                     <td>
                         <textarea name="txtreply" rows="6" cols="20"><%=rs.getString("complaint_reply")%></textarea>
                     </td>
-                    <% } %>
+                    <% }%>
                 </tr>
                 <tr>
                     <td colspan="2" align="center">
@@ -50,5 +52,6 @@
             </table>
 
         </form>
+        <%@include file="Foot.jsp" %>
     </body>
 </html>

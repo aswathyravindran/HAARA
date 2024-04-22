@@ -16,6 +16,7 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <%@include file="Head.jsp" %>
         <%
 
 //            if (request.getParameter("btnsubmit") != null) {
@@ -33,7 +34,6 @@
 //            window.location = "property.jsp";
         </script>
         <%//        } else {
-
         %>
         <script>
 //            alert("Failed");
@@ -104,6 +104,7 @@
                 </tr>
             </table>
         </form>
+       
     </body>
     <script src="../Assets/JQuery/jQuery.js"></script>
     <script>
@@ -149,12 +150,12 @@
         <%--<td ><%=rso.getString("admin_password")%></td>
         <td ><%=rso.getString("admin_contact")%></td> --%>
         <td ><a href="Addphoto.jsp?prid=<%=rs1.getString("property_id")%>">Add Photos</a></td>
-    <td ><a href="Property.jsp?del=<%=rs1.getString("property_id")%>">Delete</a></td> 
-</tr>
-<%                      }
+        <td ><a href="Property.jsp?del=<%=rs1.getString("property_id")%>">Delete</a></td> 
+    </tr>
+    <%                      }
 
 
-%>
+    %>
 </table>
 
-
+ <%@include file="Foot.jsp" %>
