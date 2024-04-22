@@ -17,46 +17,48 @@
         <title>Nest View Property</title>
     </head>
     <body>
+        <%@include file="Head.jsp" %>
         <form name="frmproperty" method="post">
             <table>
                 <tr>
                     <th colspan="2" align="center">View property</th>
                 </tr>
                 <tr>
-                <td>District</td>
-                <td>
-                    <select name="sel_district" id="sel_district" onchange="getProperty(this.value)">
-                        <option value="">-----Select------</option>
-                        <%
-                            String sel = "select * from tbl_district";
-                            ResultSet rs = con.selectCommand(sel);
-                            while (rs.next()) {
-                        %>
-                        <option value="<%=rs.getString("district_id")%>"><%=rs.getString("district_name")%></option>
-                        <%}%>
-                    </select>                       
-                </td>
+                    <td>District</td>
+                    <td>
+                        <select name="sel_district" id="sel_district" onchange="getProperty(this.value)">
+                            <option value="">-----Select------</option>
+                            <%
+                                String sel = "select * from tbl_district";
+                                ResultSet rs = con.selectCommand(sel);
+                                while (rs.next()) {
+                            %>
+                            <option value="<%=rs.getString("district_id")%>"><%=rs.getString("district_name")%></option>
+                            <%}%>
+                        </select>                       
+                    </td>
                 </tr>
             </table>
             <table id="tblViewprop">
 
-        </table>
+            </table>
         </form>
+        <%@include file="Foot.jsp" %>
     </body>
     <script src="../Assets/JQuery/jQuery.js"></script>
     <script>
-                        function getProperty(pid)
-                        {
-                            $.ajax({
-                                url: "../Assets/AjaxPages/AjaxProperty.jsp?pid=" + pid,
-                                success: function(html) {
-                                    $("#tblViewprop").empty(html);
-                                    $("#tblViewprop").append(html);
+                            function getProperty(pid)
+                            {
+                                $.ajax({
+                                    url: "../Assets/AjaxPages/AjaxProperty.jsp?pid=" + pid,
+                                    success: function(html) {
+                                        $("#tblViewprop").empty(html);
+                                        $("#tblViewprop").append(html);
 
-                                }
-                            });
-                        }
-         
+                                    }
+                                });
+                            }
+
 
     </script>
 </html>

@@ -15,6 +15,7 @@
         <title> Wishlist</title>
     </head>
     <body>
+        <%@include file="Head.jsp" %>
         <%    if (request.getParameter("del") != null) {
                 String delQry = "delete from tbl_wishlist where wishlist_id='" + request.getParameter("del") + "'";
                 con.executeCommand(delQry);
@@ -101,5 +102,6 @@
 
 
         </table>
+            <%@include file="Foot.jsp" %>
     </body>
 </html>

@@ -16,23 +16,25 @@
         <title>Property</title>
     </head>
     <body>
+        <%@include file="Head.jsp" %>
         <%
-                if (request.getParameter("btnwish") != null) {
-               String insQry1="insert into tbl_wishlist(user_id,furniture_id)values('" + session.getAttribute("uid") + "','" + request.getParameter("fid") + "') ";
-                 if (con.executeCommand(insQry1)) {
+            if (request.getParameter("btnwish") != null) {
+                String insQry1 = "insert into tbl_wishlist(user_id,furniture_id)values('" + session.getAttribute("uid") + "','" + request.getParameter("fid") + "') ";
+                if (con.executeCommand(insQry1)) {
         %>
         <script>
             alert("Added to wishlist");
             window.location = "ViewMoreFur.jsp";
         </script>
         <%
-        
-            }else { out.print(insQry1); } }
-             else if (request.getParameter("btnreq") != null) {
+            } else {
+                out.print(insQry1);
+            }
+        } else if (request.getParameter("btnreq") != null) {
 
-                String insQry = "insert into tbl_request(request_date,request_status,user_id,furniture_id)values(CURDATE(),0,'" + session.getAttribute("uid") + "','" + request.getParameter("fid") + "') ";
+            String insQry = "insert into tbl_request(request_date,request_status,user_id,furniture_id)values(CURDATE(),0,'" + session.getAttribute("uid") + "','" + request.getParameter("fid") + "') ";
 
-                if (con.executeCommand(insQry)) {
+            if (con.executeCommand(insQry)) {
         %>
         <script>
             alert("Record Saved");
@@ -106,9 +108,8 @@
                 </tr>
                 <tr>
                     <td colspan="2">
+                        <a href="ViewPhotos.jsp?prid=<%=rs3.getString("furniture_id")%>">View More Photos</a>
                         <input type="submit" value="Wishlist" name="btnwish">
-
-                        
                         <input type="submit" value="Request" name="btnreq">
                     </td>
                 </tr>
@@ -116,5 +117,6 @@
             </table>
             <% }%>
         </form>
+        <%@include file="Foot.jsp" %>
     </body>
 </html>

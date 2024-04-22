@@ -13,6 +13,7 @@
             <title>View Photo</title>
         </head>
         <body>
+        <%@include file="Head.jsp" %>
             <table align="center">  
                 <tr align="center">
                 <%        int i = 0;
@@ -32,5 +33,6 @@
                 %>
             </tr>
         </table>
+                <%@include file="Foot.jsp" %>
     </body>
 </html>

@@ -32,7 +32,7 @@
     <body>
 
         <div class="click-closed"></div>
-   
+
 
         <!--/ Nav Star /-->
         <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
@@ -51,20 +51,32 @@
                 <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="../Assets/Templates/Main/index.html">Home</a>
+                            <a class="nav-link active" href="HomePage.jsp">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../Assets/Templates/Main/about.html">About</a>
+                            <a class="nav-link" href="MyProfile.jsp">My Profile</a>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="ViewProperty.jsp">Property</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../Assets/Templates/Main/property-grid.html">Property</a>
+                            <a class="nav-link" href="ViewFurniture.jsp">Furniture</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../Assets/Templates/Main/blog-grid.html">Furniture</a>
+                            <a class="nav-link" href="Wishlist.jsp">Wish List</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="UViewRequest.jsp">Request Status</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Complaint.jsp">Complaints</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">SignOut</a>
                         </li>
                     </ul>
                 </div>
-              
+
             </div>
         </nav>
         <!--/ Nav End /-->

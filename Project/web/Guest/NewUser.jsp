@@ -82,16 +82,7 @@
                 </tr>
             </table>
         </form>
-<<<<<<< HEAD
-<!--<<<<<<< HEAD-->
-                        <%@include file="Foot.jsp" %>
-<!--=======-->
-                   
-        
-<!-->>>>>>> 725884bafdc6c07e700b5830968bfb5e31bfc285-->
-=======
         <%@include file="Foot.jsp" %>
->>>>>>> 19fc7a2654b3325e0bff9c600ad3cb6864e0b73d
     </body>
     <script src="../Assets/JQuery/jQuery.js"></script>
     <script>

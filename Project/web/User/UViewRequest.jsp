@@ -6,7 +6,7 @@
 
 <%@page import="java.sql.ResultSet"%>
 <jsp:useBean class="DB.ConnectionClass" id="con"></jsp:useBean>
-
+<%@include file="Head.jsp" %>
         <table border="1" align="center">
         <tr >
             <th >Sl.No</th>
@@ -93,3 +93,4 @@
 
     %>
 </table>
+    <%@include file="Foot.jsp" %>
