@@ -103,10 +103,10 @@
                     <i class="fas fa-star star-light submit_star mr-1" id="submit_star_4" data-rating="4"></i>
                     <i class="fas fa-star star-light submit_star mr-1" id="submit_star_5" data-rating="5"></i>
                 </h4>
-<!--                <div class="form-group">
-                    <input type="text" name="user_name" id="user_name" class="form-control" placeholder="Enter Your Name" />
+                <div class="form-group">
+                    <input type="text" name="user_name" id="user_name" class="form-control" value="<%=session.getAttribute("uname")%>" readonly="">
                     <input type="hidden" name="txt_id" id="txt_id" value="<%=request.getParameter("id")%>" />
-                </div>-->
+                </div>
                 <div class="form-group">
                     <textarea name="user_review" id="user_review" class="form-control" placeholder="Type Review Here"></textarea>
                 </div>
