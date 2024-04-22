@@ -34,15 +34,21 @@
                             %>
                             <option value="<%=rs.getString("district_id")%>"><%=rs.getString("district_name")%></option>
                             <%}%>
-                        </select>                       
+                        </select>          
+                            
                     </td>
+                      <td>Price</td>
+                    <td>
+                          
+                <input type="text" name="search" id="searchfunt" onkeyup="getsearch()">
+                        
                 </tr>
             </table>
             <table id="tblViewfur">
 
             </table>
         </form>
-        <%@include file="Foot.jsp" %>
+        
     </body>
     <script src="../Assets/JQuery/jQuery.js"></script>
     <script>
@@ -57,7 +63,22 @@
                                     }
                                 });
                             }
+                             function getsearch()
+                             
+                            {
+                                var word=document.getElementById("searchfunt").value
+                                console.log(word)
+                                $.ajax({
+                                    url: "../Assets/AjaxPages/AjaxPrice.jsp?word=" +word,
+                                    success: function(html) {
+                                        $("#tblViewfur").empty(html);
+                                        $("#tblViewfur").append(html);
+
+                                    }
+                                });
+                            }
 
 
     </script>
+    <%@include file="Foot.jsp" %>
 </html>

@@ -29,25 +29,17 @@
             } else {
                 out.print(insQry1);
             }
-        } else if (request.getParameter("btnreq") != null) {
-
-            String insQry = "insert into tbl_request(request_date,request_status,user_id,property_id)values(CURDATE(),'" + 0 + "','" + session.getAttribute("uid") + "','" + request.getParameter("pid") + "') ";
-
-            if (con.executeCommand(insQry)) {
-        %>
+        }else if (request.getParameter("btnreq") != null) {
+            session.setAttribute("pid", request.getParameter("pid"));
+           %>
         <script>
-            alert("Record Saved");
-            window.location = "ViewMoreProp.jsp?pid='" + request.getParameter("pid") + "'";
+           
+            window.location = "PropertyRequest.jsp";
         </script>
         <%
-        } else {
-        %>
-        <script>
-            alert("Failed");
-            window.location = "ViewMoreProp.jsp";
-        </script>
-        <%
-                }
+
+            
+
             }
 
             String selQry3 = "select * from tbl_property h,tbl_place p,tbl_property_owners q where q.property_owners_id=h.property_owners_id and h.place_id=p.place_id and h.property_id='" + request.getParameter("pid") + "'";

@@ -31,25 +31,16 @@
                 out.print(insQry1);
             }
         } else if (request.getParameter("btnreq") != null) {
-
-            String insQry = "insert into tbl_request(request_date,request_status,user_id,furniture_id)values(CURDATE(),0,'" + session.getAttribute("uid") + "','" + request.getParameter("fid") + "') ";
-
-            if (con.executeCommand(insQry)) {
-        %>
+            session.setAttribute("fid", request.getParameter("fid"));
+           %>
         <script>
-            alert("Record Saved");
-            window.location = "ViewMoreFur.jsp?fid='" + request.getParameter("fid") + "'";
+           
+            window.location = "FurnitureRequest.jsp";
         </script>
         <%
-        } else {
-            out.print(insQry);
-        %>
-        <!--        <script>
-                    alert("Failed");
-                    window.location = "ViewMoreFur.jsp";
-                </script>-->
-        <%
-                }
+
+            
+
             }
 
             String selQry3 = "select * from tbl_furniture h,tbl_place p,tbl_furniture_owner q where q.furniture_owner_id=h.furniture_owner_id and h.place_id=p.place_id and h.furniture_id='" + request.getParameter("fid") + "'";

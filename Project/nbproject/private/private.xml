@@ -2,40 +2,25 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         <group>
-            <file>file:/E:/HAARA/Project/web/Assets/ActionPages/UserUploadAction.jsp</file>
-            <file>file:/E:/HAARA/Project/web/Guest/NewUser.jsp</file>
-            <file>file:/E:/HAARA/Project/web/Guest/Login.jsp</file>
+            <file>file:/E:/HAARA/Project/web/User/FurnitureReview.jsp</file>
+            <file>file:/E:/HAARA/Project/web/User/FurnitureRequest.jsp</file>
+            <file>file:/E:/HAARA/Project/web/Assets/AjaxPages/AjaxPrice.jsp</file>
+            <file>file:/E:/HAARA/Project/web/Guest/Foot.jsp</file>
+            <file>file:/E:/HAARA/Project/web/Guest/index.html</file>
+            <file>file:/E:/HAARA/Project/web/User/ViewMoreFur.jsp</file>
+            <file>file:/E:/HAARA/Project/web/User/PropertyRequest.jsp</file>
+            <file>file:/E:/HAARA/Project/web/Propertyowner/ViewRequest.jsp</file>
+            <file>file:/E:/HAARA/Project/web/User/ViewFurniture.jsp</file>
+            <file>file:/E:/HAARA/Project/web/Assets/AjaxPages/AjaxPPrice.jsp</file>
+            <file>file:/E:/HAARA/Project/web/Assets/AjaxPages/AjaxFRating.jsp</file>
+            <file>file:/E:/HAARA/Project/web/User/Head.jsp</file>
+            <file>file:/E:/HAARA/Project/web/User/ViewMoreProp.jsp</file>
+            <file>file:/E:/HAARA/Project/web/User/ViewProperty.jsp</file>
+            <file>file:/E:/HAARA/Project/web/Guest/Head.jsp</file>
+            <file>file:/E:/HAARA/Project/web/User/Payment.jsp</file>
+            <file>file:/E:/HAARA/Project/web/Assets/AjaxPages/AjaxFurniture.jsp</file>
+            <file>file:/E:/HAARA/Project/web/User/UViewRequest.jsp</file>
         </group>
-=======
-<<<<<<< HEAD
-=======
-        <group/>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 725884bafdc6c07e700b5830968bfb5e31bfc285
->>>>>>> 7f3e841fa100e05eba3e2f6fc5eff663717c0555
-        <group>
-            <file>file:/D:/HAARA/Project/web/Assets/ActionPages/PPhotoUploadAction.jsp</file>
-            <file>file:/D:/HAARA/Project/web/Shopowner/Furniture.jsp</file>
-            <file>file:/D:/HAARA/Project/web/Propertyowner/Pprofile.jsp</file>
-            <file>file:/D:/HAARA/Project/web/Shopowner/AddPhoto.jsp</file>
-            <file>file:/D:/HAARA/Project/web/Assets/ActionPages/FPhotoUploadAction.jsp</file>
-            <file>file:/D:/HAARA/Project/web/Shopowner/Sprofile.jsp</file>
-            <file>file:/D:/HAARA/Project/web/Propertyowner/Addphoto.jsp</file>
-        </group>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a11ad406b52fcef4a48747d9803fe606d7481b1c
->>>>>>> 8af21d62354ffe3733d253c3af98fe44409bf8c5
->>>>>>> 725884bafdc6c07e700b5830968bfb5e31bfc285
->>>>>>> 620d62016262d4a37b6b9237271cf61ccfecae11
->>>>>>> 7f3e841fa100e05eba3e2f6fc5eff663717c0555
     </open-files>
 </project-private>

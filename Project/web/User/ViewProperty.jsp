@@ -1,9 +1,8 @@
 <%-- 
-    Document   : ViewProperty
-    Created on : 26 Mar, 2024, 4:58:26 PM
+    Document   : ViewFurniture
+    Created on : 26 Mar, 2024, 5:15:00 PM
     Author     : Admin
 --%>
-
 
 
 <%@page import="java.sql.ResultSet"%>
@@ -21,7 +20,7 @@
         <form name="frmproperty" method="post">
             <table>
                 <tr>
-                    <th colspan="2" align="center">View property</th>
+                    <th colspan="2" align="center">View Property</th>
                 </tr>
                 <tr>
                     <td>District</td>
@@ -35,15 +34,21 @@
                             %>
                             <option value="<%=rs.getString("district_id")%>"><%=rs.getString("district_name")%></option>
                             <%}%>
-                        </select>                       
+                        </select>          
+                            
                     </td>
+                      <td>Price</td>
+                    <td>
+                          
+                <input type="text" name="search" id="searchprop" onkeyup="getsearch()">
+                        
                 </tr>
             </table>
             <table id="tblViewprop">
 
             </table>
         </form>
-        <%@include file="Foot.jsp" %>
+        
     </body>
     <script src="../Assets/JQuery/jQuery.js"></script>
     <script>
@@ -58,7 +63,22 @@
                                     }
                                 });
                             }
+                             function getsearch()
+                             
+                            {
+                                var word=document.getElementById("searchprop").value
+                                console.log(word)
+                                $.ajax({
+                                    url: "../Assets/AjaxPages/AjaxPPrice.jsp?word=" +word,
+                                    success: function(html) {
+                                        $("#tblViewprop").empty(html);
+                                        $("#tblViewprop").append(html);
+
+                                    }
+                                });
+                            }
 
 
     </script>
+    <%@include file="Foot.jsp" %>
 </html>
