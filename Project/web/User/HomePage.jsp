@@ -30,7 +30,10 @@
 
     <body>
 <!--<<<<<<< HEAD-->
+<<<<<<< HEAD
+=======
 <%@include file="Head.jsp" %>
+>>>>>>> 19fc7a2654b3325e0bff9c600ad3cb6864e0b73d
 
 <form name="frmMyprofile" method="post">
         <h1>Hello <%=session.getAttribute("uname")%></h1>
@@ -853,13 +856,32 @@
 
                     </body>
                     </html>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 19fc7a2654b3325e0bff9c600ad3cb6864e0b73d
         <%if (request.getParameter("btnmyprofile") != null) {
             response.sendRedirect("../User/MyProfile.jsp");
         }
         %>
+<<<<<<< HEAD
+        <form name="frmMyprofile" method="post">
+        <h1>Hello <%=session.getAttribute("uname")%></h1>
+        <a href="ViewProperty.jsp">Property</a>
+        <a href="ViewFurniture.jsp">Furniture</a>
+        <a href="UViewRequest.jsp">Request Status</a>
+        <a href="Complaint.jsp">Have any complaints?</a>
+<!--<<<<<<< HEAD-->
+         <a href="Wishlist.jsp">Wishlist</a>
+         <a href="MyProfile.jsp">My Profile</a>
+<!--        <input type="submit" name="btnmyprofile" value="My Profile">-->
+        </form>
+    </body>
+</html>
+=======
         
         <%@include file="Foot.jsp" %>
     </body>
 </html>
 
+>>>>>>> 19fc7a2654b3325e0bff9c600ad3cb6864e0b73d
