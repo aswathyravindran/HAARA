@@ -33,7 +33,7 @@
 <<<<<<< HEAD
 =======
 <%@include file="Head.jsp" %>
->>>>>>> 19fc7a2654b3325e0bff9c600ad3cb6864e0b73d
+
 
 <form name="frmMyprofile" method="post">
         <h1>Hello <%=session.getAttribute("uname")%></h1>
