@@ -54,11 +54,13 @@
         } else {
 %>
 <script>
+    
     alert("Failed");
 
     window.location = "Login.jsp";
 </script>
 <%
+            
         }
     }
 

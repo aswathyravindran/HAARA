@@ -15,6 +15,7 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <%@include file="Head.jsp" %>
         <% 
         if(request.getParameter("btnrequest")!=null){
             String insQry = "insert into tbl_request(request_date,request_status,user_id,furniture_id,from_date,to_date,total_days)values(CURDATE(),0,'" + session.getAttribute("uid") + "','" + session.getAttribute("fid") + "','" + request.getParameter("frmdate") + "','" + request.getParameter("todate") + "','" + request.getParameter("days") + "') ";
@@ -68,6 +69,7 @@
                 </tr>
             </table>
         </form>
+                    <%@include file="Foot.jsp" %>
     </body>
 </html>
  <script src="../Assets/JQuery/jQuery.js"></script>
