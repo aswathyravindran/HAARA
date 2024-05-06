@@ -20,7 +20,7 @@
         <form name="frmfurniture" method="post">
             <table>
                 <tr>
-                    <th colspan="2" align="center">View Furniture</th>
+                    <th colspan="4" align="center">View Furniture</th>
                 </tr>
                 <tr>
                     <td>District</td>

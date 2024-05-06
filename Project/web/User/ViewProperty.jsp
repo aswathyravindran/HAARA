@@ -20,7 +20,7 @@
         <form name="frmproperty" method="post">
             <table>
                 <tr>
-                    <th  colspan="2" align="center">View Property</th>
+                    <th  colspan="4" align="center">View Property</th>
                 </tr>
                 <tr>
                     <td>District</td>
@@ -80,5 +80,5 @@
 
 
     </script>
-    <%@include file="Foot.jsp" %>
+    
 </html>
