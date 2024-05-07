@@ -6,7 +6,7 @@
                                 <div class="col-md-12">
                                     <nav class="nav-footer">
                                         <ul class="list-inline">
-                                            <li class="list-inline-item">
+<!--                                            <li class="list-inline-item">
                                                 <a href="#">Home</a>
                                             </li>
                                             <li class="list-inline-item">
@@ -20,7 +20,7 @@
                                             </li>
                                             <li class="list-inline-item">
                                                 <a href="#">Contact</a>
-                                            </li>
+                                            </li>-->
                                         </ul>
                                     </nav>
                                     <div class="socials-a">
@@ -30,26 +30,26 @@
                                                     <i class="fa fa-facebook" aria-hidden="true"></i>
                                                 </a>
                                             </li>
-                                            <li class="list-inline-item">
+<!--                                            <li class="list-inline-item">
                                                 <a href="#">
                                                     <i class="fa fa-twitter" aria-hidden="true"></i>
                                                 </a>
-                                            </li>
+                                            </li>-->
                                             <li class="list-inline-item">
                                                 <a href="#">
                                                     <i class="fa fa-instagram" aria-hidden="true"></i>
                                                 </a>
                                             </li>
-                                            <li class="list-inline-item">
+<!--                                            <li class="list-inline-item">
                                                 <a href="#">
                                                     <i class="fa fa-pinterest-p" aria-hidden="true"></i>
                                                 </a>
-                                            </li>
-                                            <li class="list-inline-item">
+                                            </li>-->
+<!--                                            <li class="list-inline-item">
                                                 <a href="#">
                                                     <i class="fa fa-dribbble" aria-hidden="true"></i>
                                                 </a>
-                                            </li>
+                                            </li>-->
                                         </ul>
                                     </div>
                                     <div class="copyright-footer">

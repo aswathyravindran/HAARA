@@ -104,7 +104,7 @@
                     <i class="fas fa-star star-light submit_star mr-1" id="submit_star_5" data-rating="5"></i>
                 </h4>
                 <div class="form-group">
-                    <input type="text" name="user_name" id="user_name" class="form-control" placeholder="Enter Your Name" />
+                    <input type="text" name="user_name" id="user_name" class="form-control" value="<%=session.getAttribute("uname")%>" readonly="">
                     <input type="hidden" name="txt_id" id="txt_id" value="<%=request.getParameter("id")%>" />
                 </div>
                 <div class="form-group">

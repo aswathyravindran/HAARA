@@ -29,132 +29,31 @@
     </head>
 
     <body>
-<!--<<<<<<< HEAD-->
-<<<<<<< HEAD
-=======
+
 <%@include file="Head.jsp" %>
->>>>>>> 19fc7a2654b3325e0bff9c600ad3cb6864e0b73d
+
 
 <form name="frmMyprofile" method="post">
         <h1>Hello <%=session.getAttribute("uname")%></h1>
-<!--        <a href="ViewProperty.jsp">Property</a>
-        <a href="ViewFurniture.jsp">Furniture</a>
-        <a href="UViewRequest.jsp">Request Status</a>
-        <a href="Complaint.jsp">Have any complaints?</a>
-         <a href="Wishlist.jsp">Wishlist</a>
-         <a href="MyProfile.jsp">My Profile</a>-->
+
         </form>
 
-<!--        <div class="click-closed"></div>
-   
-
-        / Nav Star /
-        <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
-            <div class="container">
-                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
-                        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <a class="navbar-brand text-brand" href="../Assets/Templates/Main/index.html">Nest<span class="color-b"></span></a>
-                <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
-                        data-target="#navbarTogglerDemo01" aria-expanded="false">
-                    <span class="fa fa-search" aria-hidden="true"></span>
-                </button>
-                <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="../Assets/Templates/Main/index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../Assets/Templates/Main/about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../Assets/Templates/Main/property-grid.html">Property</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../Assets/Templates/Main/blog-grid.html">Furniture</a>
-                        </li>
-                    </ul>
-                </div>
-              
-            </div>
-        </nav>
-        / Nav End /-->
 
         <!--/ Carousel Star /-->
         <div class="intro intro-carousel">
             <div id="carousel" class="owl-carousel owl-theme">
                 <div class="carousel-item-a intro-item bg-image" style="background-image: url(../Assets/Templates/Main/img/slide-1.jpg)">
-<!--                    <div class="overlay overlay-a"></div>
-                    <div class="intro-content display-table">
-                        <div class="table-cell">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-8">
-                                        <div class="intro-body">
-                                            <p class="intro-title-top">Doral, Florida
-                                                <br> 78345</p>
-                                            <h1 class="intro-title mb-4">
-                                                <span class="color-b">204 </span> Mount
-                                                <br> Olive Road Two</h1>
-                                            <p class="intro-subtitle intro-price">
-                                                <a href="#"><span class="price-a">rent | $ 12.000</span></a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>-->
+
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item-a intro-item bg-image" style="background-image: url(../Assets/Templates/Main/img/slide-2.jpg)">
                     <div class="overlay overlay-a"></div>
-<!--                    <div class="intro-content display-table">
-                        <div class="table-cell">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-8">
-                                        <div class="intro-body">
-                                            <p class="intro-title-top">Doral, Florida
-                                                <br> 78345</p>
-                                            <h1 class="intro-title mb-4">
-                                                <span class="color-b">204 </span> Rino
-                                                <br> Venda Road Five</h1>
-                                            <p class="intro-subtitle intro-price">
-                                                <a href="#"><span class="price-a">rent | $ 12.000</span></a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>-->
+
                 </div>
                 <div class="carousel-item-a intro-item bg-image" style="background-image: url(../Assets/Templates/Main/img/slide-3.jpg)">
                     <div class="overlay overlay-a"></div>
-<!--                    <div class="intro-content display-table">
-                        <div class="table-cell">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-8">
-                                        <div class="intro-body">
-                                            <p class="intro-title-top">Doral, Florida
-                                                <br> 78345</p>
-                                            <h1 class="intro-title mb-4">
-                                                <span class="color-b">204 </span> Alira
-                                                <br> Roan Road One</h1>
-                                            <p class="intro-subtitle intro-price">
-                                                <a href="#"><span class="price-a">rent | $ 12.000</span></a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
+
             </div>
         </div>
         <!--/ Carousel end /-->
@@ -223,32 +122,7 @@
                         </div>
                     </div>
                 </div>
-                <!--        <div class="col-md-4">
-                          <div class="card-box-c foo">
-                            <div class="card-header-c d-flex">
-                              <div class="card-box-ico">
-                                <span class="fa fa-home"></span>
-                              </div>-->
-                <!--              <div class="card-title-c align-self-center">
-                                <h2 class="title-c">Sell</h2>
-                              </div>
-                            </div>
-                            <div class="card-body-c">
-                              <p class="content-c">
-                                Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                                convallis a pellentesque
-                                nec, egestas non nisi.
-                              </p>
-                            </div>
-                            <div class="card-footer-c">
-                              <a href="#" class="link-c link-icon">Read more
-                                <span class="ion-ios-arrow-forward"></span>
-                              </a>
-                            </div>-->
-                <!--          </div>
-                        </div>
-                      </div>
-                    </div>-->
+               
         </section>
         <!--/ Services End /-->
 
@@ -261,11 +135,7 @@
                             <div class="title-box">
                                 <h2 class="title-a">Latest Properties</h2>
                             </div>
-                            <div class="title-link">
-                                <a href="../Assets/Templates/Main/property-grid.html">All Property
-                                    <span class="ion-ios-arrow-forward"></span>
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -279,13 +149,13 @@
                                 <div class="card-overlay-a-content">
                                     <div class="card-header-a">
                                         <h2 class="card-title-a">
-                                            <a href="../Assets/Templates/Main/property-single.html">206 Mount
+                                            <a href="">206 Mount
                                                 <br /> Olive Road Two</a>
                                         </h2>
                                     </div>
                                     <div class="card-body-a">
                                         <div class="price-box d-flex">
-                                            <span class="price-a">rent | $ 12.000</span>
+                                            <span class="price-a">rent | ? 12000</span>
                                         </div>
                                         <a href="#" class="link-a">Click here to view
                                             <span class="ion-ios-arrow-forward"></span>
@@ -326,15 +196,15 @@
                                 <div class="card-overlay-a-content">
                                     <div class="card-header-a">
                                         <h2 class="card-title-a">
-                                            <a href="../Assets/Templates/Main/property-single.html">157 West
+                                            <a href="">157 West
                                                 <br /> Central Park</a>
                                         </h2>
                                     </div>
                                     <div class="card-body-a">
                                         <div class="price-box d-flex">
-                                            <span class="price-a">rent | $ 12.000</span>
+                                            <span class="price-a">rent | ? 12000</span>
                                         </div>
-                                        <a href="../Assets/Templates/Main/property-single.html" class="link-a">Click here to view
+                                        <a href="" class="link-a">Click here to view
                                             <span class="ion-ios-arrow-forward"></span>
                                         </a>
                                     </div>
@@ -379,7 +249,7 @@
                                     </div>
                                     <div class="card-body-a">
                                         <div class="price-box d-flex">
-                                            <span class="price-a">rent | $ 12.000</span>
+                                            <span class="price-a">rent | ?12400</span>
                                         </div>
                                         <a href="../Assets/Templates/Main/property-single.html" class="link-a">Click here to view
                                             <span class="ion-ios-arrow-forward"></span>
@@ -426,7 +296,7 @@
                                     </div>
                                     <div class="card-body-a">
                                         <div class="price-box d-flex">
-                                            <span class="price-a">rent | $ 12.000</span>
+                                            <span class="price-a">rent | ?125000</span>
                                         </div>
                                         <a href="../Assets/Templates/Main/property-single.html" class="link-a">Click here to view
                                             <span class="ion-ios-arrow-forward"></span>
@@ -463,215 +333,48 @@
         </section>
         <!--/ Property End /-->
 
-        <!--/ Furniture Start /-->
-        <section class="section-property section-t8">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="title-wrap d-flex justify-content-between">
-                            <div class="title-box">
-                                <h2 class="title-a">Latest Furniture</h2>
-                            </div>
-                            <div class="title-link">
-                                <a href="../Assets/Templates/Main/property-grid.html">All Furniture
-                                    <span class="ion-ios-arrow-forward"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="property-carousel" class="owl-carousel owl-theme">
-                    <div class="carousel-item-b">
-                        <div class="card-box-a card-shadow">
-                            <div class="img-box-a">
-                                <img src="../Assets/Templates/Main/img/property-6.jpg" alt="" class="img-a img-fluid">
-                            </div>
-                            <div class="card-overlay">
-                                <div class="card-overlay-a-content">
-                                    <div class="card-header-a">
-                                        <h2 class="card-title-a">
-                                            <a href="../Assets/Templates/Main/property-single.html">206 Mount
-                                                <br /> Olive Road Two</a>
-                                        </h2>
-                                    </div>
-                                    <div class="card-body-a">
-                                        <div class="price-box d-flex">
-                                            <span class="price-a">rent | $ 12.000</span>
-                                        </div>
-                                        <a href="#" class="link-a">Click here to view
-                                            <span class="ion-ios-arrow-forward"></span>
-                                        </a>
-                                    </div>
-                                    <div class="card-footer-a">
-                                        <ul class="card-info d-flex justify-content-around">
-                                            <li>
-                                                <h4 class="card-info-title">Area</h4>
-                                                <span>340m
-                                                    <sup>2</sup>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <h4 class="card-info-title">Beds</h4>
-                                                <span>2</span>
-                                            </li>
-                                            <li>
-                                                <h4 class="card-info-title">Baths</h4>
-                                                <span>4</span>
-                                            </li>
-                                            <li>
-                                                <h4 class="card-info-title">Garages</h4>
-                                                <span>1</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item-b">
-                        <div class="card-box-a card-shadow">
-                            <div class="img-box-a">
-                                <img src="../Assets/Templates/Main/img/property-3.jpg" alt="" class="img-a img-fluid">
-                            </div>
-                            <div class="card-overlay">
-                                <div class="card-overlay-a-content">
-                                    <div class="card-header-a">
-                                        <h2 class="card-title-a">
-                                            <a href="../Assets/Templates/Main/property-single.html">157 West
-                                                <br /> Central Park</a>
-                                        </h2>
-                                    </div>
-                                    <div class="card-body-a">
-                                        <div class="price-box d-flex">
-                                            <span class="price-a">rent | $ 12.000</span>
-                                        </div>
-                                        <a href="../Assets/Templates/Main/property-single.html" class="link-a">Click here to view
-                                            <span class="ion-ios-arrow-forward"></span>
-                                        </a>
-                                    </div>
-                                    <div class="card-footer-a">
-                                        <ul class="card-info d-flex justify-content-around">
-                                            <li>
-                                                <h4 class="card-info-title">Area</h4>
-                                                <span>340m
-                                                    <sup>2</sup>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <h4 class="card-info-title">Beds</h4>
-                                                <span>2</span>
-                                            </li>
-                                            <li>
-                                                <h4 class="card-info-title">Baths</h4>
-                                                <span>4</span>
-                                            </li>
-                                            <li>
-                                                <h4 class="card-info-title">Garages</h4>
-                                                <span>1</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item-b">
-                        <div class="card-box-a card-shadow">
-                            <div class="img-box-a">
-                                <img src="../Assets/Templates/Main/img/property-7.jpg" alt="" class="img-a img-fluid">
-                            </div>
-                            <div class="card-overlay">
-                                <div class="card-overlay-a-content">
-                                    <div class="card-header-a">
-                                        <h2 class="card-title-a">
-                                            <a href="../Assets/Templates/Main/property-single.html">245 Azabu
-                                                <br /> Nishi Park let</a>
-                                        </h2>
-                                    </div>
-                                    <div class="card-body-a">
-                                        <div class="price-box d-flex">
-                                            <span class="price-a">rent | $ 12.000</span>
-                                        </div>
-                                        <a href="../Assets/Templates/Main/property-single.html" class="link-a">Click here to view
-                                            <span class="ion-ios-arrow-forward"></span>
-                                        </a>
-                                    </div>
-                                    <div class="card-footer-a">
-                                        <ul class="card-info d-flex justify-content-around">
-                                            <li>
-                                                <h4 class="card-info-title">Area</h4>
-                                                <span>340m
-                                                    <sup>2</sup>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <h4 class="card-info-title">Beds</h4>
-                                                <span>2</span>
-                                            </li>
-                                            <li>
-                                                <h4 class="card-info-title">Baths</h4>
-                                                <span>4</span>
-                                            </li>
-                                            <li>
-                                                <h4 class="card-info-title">Garages</h4>
-                                                <span>1</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item-b">
-                        <div class="card-box-a card-shadow">
-                            <div class="img-box-a">
-                                <img src="../Assets/Templates/Main/img/property-10.jpg" alt="" class="img-a img-fluid">
-                            </div>
-                            <div class="card-overlay">
-                                <div class="card-overlay-a-content">
-                                    <div class="card-header-a">
-                                        <h2 class="card-title-a">
-                                            <a href="../Assets/Templates/Main/property-single.html">204 Montal
-                                                <br /> South Bela Two</a>
-                                        </h2>
-                                    </div>
-                                    <div class="card-body-a">
-                                        <div class="price-box d-flex">
-                                            <span class="price-a">rent | $ 12.000</span>
-                                        </div>
-                                        <a href="../Assets/Templates/Main/property-single.html" class="link-a">Click here to view
-                                            <span class="ion-ios-arrow-forward"></span>
-                                        </a>
-                                    </div>
-                                    <div class="card-footer-a">
-                                        <ul class="card-info d-flex justify-content-around">
-                                            <li>
-                                                <h4 class="card-info-title">Area</h4>
-                                                <span>340m
-                                                    <sup>2</sup>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <h4 class="card-info-title">Beds</h4>
-                                                <span>2</span>
-                                            </li>
-                                            <li>
-                                                <h4 class="card-info-title">Baths</h4>
-                                                <span>4</span>
-                                            </li>
-                                            <li>
-                                                <h4 class="card-info-title">Garages</h4>
-                                                <span>1</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+  <!-- Furniture Section Start -->
+<section class="section-furniture">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-wrap d-flex justify-content-between">
+                    <div class="title-box">
+                        <h2 class="title-furniture">Latest Furniture</h2>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="furniture-item">
+                    <img src="../Assets/Templates/Main/img/property-10.jpg" alt="Furniture 1" class="img-fluid">
+                    <h3 class="furniture-title">Comfortable Sofa</h3>
+                    <p class="furniture-description">A cozy sofa perfect for your living room.</p>
+                    <span class="furniture-price">?4909</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="furniture-item">
+                    <img src="../Assets/Templates/Main/img/property-9.jpg" alt="Furniture 2" class="img-fluid">
+                    <h3 class="furniture-title">Modern Coffee Table</h3>
+                    <p class="furniture-description">A sleek coffee table to enhance your decor.</p>
+                    <span class="furniture-price">?5299</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="furniture-item">
+                    <img src="../Assets/Templates/Main/img/property-8.jpg" alt="Furniture 3" class="img-fluid">
+                    <h3 class="furniture-title">Elegant Dining Chairs</h3>
+                    <p class="furniture-description">Beautiful chairs for your dining area.</p>
+                    <span class="furniture-price">?5799 each</span>
+                </div>
+            </div>
+            <!-- Add more furniture items here -->
+        </div>
+    </div>
+</section>
+<!-- Furniture Section End -->
 
         <!--/ footer Star /-->
         <section class="section-footer">
@@ -701,90 +404,14 @@
                             </div>
                         </div>
                     </div>
-                    <!--        <div class="col-sm-12 col-md-4 section-md-t3">
-                              <div class="widget-a">
-                                <div class="w-header-a">
-                                  <h3 class="w-title-a text-brand">The Company</h3>
-                                </div>
-                                <div class="w-body-a">
-                                  <div class="w-body-a">
-                                    <ul class="list-unstyled">
-                                      <li class="item-list-a">
-                                        <i class="fa fa-angle-right"></i> <a href="#">Site Map</a>
-                                      </li>
-                                      <li class="item-list-a">
-                                        <i class="fa fa-angle-right"></i> <a href="#">Legal</a>
-                                      </li>
-                                      <li class="item-list-a">
-                                        <i class="fa fa-angle-right"></i> <a href="#">Agent Admin</a>
-                                      </li>
-                                      <li class="item-list-a">
-                                        <i class="fa fa-angle-right"></i> <a href="#">Careers</a>
-                                      </li>
-                                      <li class="item-list-a">
-                                        <i class="fa fa-angle-right"></i> <a href="#">Affiliate</a>
-                                      </li>
-                                      <li class="item-list-a">
-                                        <i class="fa fa-angle-right"></i> <a href="#">Privacy Policy</a>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-sm-12 col-md-4 section-md-t3">
-                              <div class="widget-a">
-                                <div class="w-header-a">
-                                  <h3 class="w-title-a text-brand">International sites</h3>
-                                </div>
-                                <div class="w-body-a">
-                                  <ul class="list-unstyled">
-                                    <li class="item-list-a">
-                                      <i class="fa fa-angle-right"></i> <a href="#">Venezuela</a>
-                                    </li>
-                                    <li class="item-list-a">
-                                      <i class="fa fa-angle-right"></i> <a href="#">China</a>
-                                    </li>
-                                    <li class="item-list-a">
-                                      <i class="fa fa-angle-right"></i> <a href="#">Hong Kong</a>
-                                    </li>
-                                    <li class="item-list-a">
-                                      <i class="fa fa-angle-right"></i> <a href="#">Argentina</a>
-                                    </li>
-                                    <li class="item-list-a">
-                                      <i class="fa fa-angle-right"></i> <a href="#">Singapore</a>
-                                    </li>
-                                    <li class="item-list-a">
-                                      <i class="fa fa-angle-right"></i> <a href="#">Philippines</a>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>-->
+                    
                     <footer>
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
                                     <nav class="nav-footer">
                                         <ul class="list-inline">
-                                            <li class="list-inline-item">
-                                                <a href="#">Home</a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#">About</a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="#">Property</a>
-                                            </li>
-<!--                                            <li class="list-inline-item">
-                                                <a href="#">Blog</a>
-                                            </li>-->
-                                            <li class="list-inline-item">
-                                                <a href="#">Contact</a>
-                                            </li>
+
                                         </ul>
                                     </nav>
                                     <div class="socials-a">
@@ -809,11 +436,7 @@
                                                     <i class="fa fa-pinterest-p" aria-hidden="true"></i>
                                                 </a>
                                             </li>
-                                            <li class="list-inline-item">
-                                                <a href="#">
-                                                    <i class="fa fa-dribbble" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
+
                                         </ul>
                                     </div>
                                     <div class="copyright-footer">
@@ -823,13 +446,7 @@
                                         </p>
                                     </div>
                                     <div class="credits">
-                                        <!--
-                                          All the links in the footer should remain intact.
-                                          You can delete the links only if you purchased the pro version.
-                                          Licensing information: https://bootstrapmade.com/license/
-                                          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=EstateAgency
-                                        -->
-<!--                                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>-->
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -856,32 +473,18 @@
 
                     </body>
                     </html>
-<<<<<<< HEAD
-=======
 
->>>>>>> 19fc7a2654b3325e0bff9c600ad3cb6864e0b73d
         <%if (request.getParameter("btnmyprofile") != null) {
             response.sendRedirect("../User/MyProfile.jsp");
         }
         %>
-<<<<<<< HEAD
-        <form name="frmMyprofile" method="post">
-        <h1>Hello <%=session.getAttribute("uname")%></h1>
-        <a href="ViewProperty.jsp">Property</a>
-        <a href="ViewFurniture.jsp">Furniture</a>
-        <a href="UViewRequest.jsp">Request Status</a>
-        <a href="Complaint.jsp">Have any complaints?</a>
-<!--<<<<<<< HEAD-->
-         <a href="Wishlist.jsp">Wishlist</a>
-         <a href="MyProfile.jsp">My Profile</a>
-<!--        <input type="submit" name="btnmyprofile" value="My Profile">-->
-        </form>
+
+
     </body>
 </html>
-=======
+
         
         <%@include file="Foot.jsp" %>
     </body>
 </html>
 
->>>>>>> 19fc7a2654b3325e0bff9c600ad3cb6864e0b73d
