@@ -20,27 +20,12 @@
         <%@include file="Head.jsp" %>
         <%
 
-//            if (request.getParameter("btnsubmit") != null) {
-//                
-//                String furnitureAddress = request.getParameter("txtaddress");
-//                String furniturePrice = request.getParameter("txtprice");
-//                String furnitureDetails = request.getParameter("txtdetails");
-//                String contractTime = request.getParameter("txttime");
-//                String insQry = "insert into tbl_furniture (furniture_image,furniture_name,furniture_address,furniture_price,furniture_details,place_id,furniture_contract_time)values('" + furnitureAddress + "','" + furniturePrice + "','" + furnitureDetails + "','" + contractTime+ "') ";
-//                
-//                if (con.executeCommand(insQry)) {
         %>
-<!--        <script>
-            alert("Record Saved");
-            window.location = "Furniture.jsp";
-        </script>-->
+
         <%
-//        } else {
-//                    
+                  
         %>
        <script>
-//            alert("Failed");
-//            window.location = "Furniture.jsp";
         </script>
         <%
         %>
@@ -148,8 +133,6 @@
         <td ><%=rs1.getString("furniture_price")%></td>
         <td ><%=rs1.getString("furniture_description")%></td>
         <td ><%=rs1.getString("furniture_contract_time")%></td>
-        <%--<td ><%=rso.getString("admin_password")%></td>
-        <td ><%=rso.getString("admin_contact")%></td> --%>
         <td ><a href="AddPhoto.jsp?prid=<%=rs1.getString("furniture_id")%>">Add Photos</a></td>
         <td ><a href="Furniture.jsp?del=<%=rs1.getString("furniture_id")%>">Delete</a></td> 
     </tr>

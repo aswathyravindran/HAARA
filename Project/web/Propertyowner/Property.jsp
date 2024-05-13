@@ -19,25 +19,14 @@
         <%@include file="Head.jsp" %>
         <%
 
-//            if (request.getParameter("btnsubmit") != null) {
-//                
-//                String propertyAddress = request.getParameter("txtaddress");
-//                String propertyPrice = request.getParameter("txtprice");
-//                String propertyDetails = request.getParameter("txtdetails");
-//                String contractTime = request.getParameter("txttime");
-//                String insQry = "insert into tbl_property (property_photo,property_address,property_price,property_details,place_id,property_contract_time)values('" + propertyAddress + "','" + propertyPrice + "','" + propertyDetails + "','" + contractTime+ "') ";
-//                
-//                if (con.executeCommand(insQry)) {
         %>
         <script>
-//            alert("Record Saved");
-//            window.location = "property.jsp";
+
         </script>
-        <%//        } else {
+        <%
         %>
         <script>
-//            alert("Failed");
-//            window.location = "property.jsp";
+
         </script>
         <%//                }
 //            }
