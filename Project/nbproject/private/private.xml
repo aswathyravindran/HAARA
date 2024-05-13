@@ -3,10 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/HAARA/Project/web/Guest/Head.jsp</file>
-            <file>file:/E:/HAARA/Project/web/Guest/Foot.jsp</file>
-            <file>file:/E:/HAARA/Project/web/Guest/about.html</file>
-            <file>file:/E:/HAARA/Project/web/Guest/index.html</file>
+            <file>file:/F:/HAARA/Project/web/Guest/FurnitureOwner.jsp</file>
+            <file>file:/F:/HAARA/Project/web/Guest/PropertyOwner.jsp</file>
+            <file>file:/F:/HAARA/Project/web/Admin/index.html</file>
+            <file>file:/F:/HAARA/Project/web/Guest/NewUser.jsp</file>
+            <file>file:/F:/HAARA/Project/web/Admin/AdminhomePage.jsp</file>
+            <file>file:/F:/HAARA/Project/web/User/UViewRequest.jsp</file>
+            <file>file:/F:/HAARA/Project/web/Guest/Login.jsp</file>
+            <file>file:/F:/HAARA/Project/web/User/HomePage.jsp</file>
         </group>
     </open-files>
 </project-private>

@@ -86,7 +86,7 @@
             <% } else if (s == 1) {
             %>
             Accept
-            <a href="PChat/Chat.jsp?id=<%=rs1.getString("property_owners_id")%>">Chat</a>
+            <a href="PChat/Chat.jsp?id=<%=rs1.getString("property_owners_id")%>">Chat</a>x
             
             <%if (p == 1) {
             %>Paid
@@ -95,7 +95,7 @@
             <a href="Payment.jsp?id=<%=rs1.getString("request_id")%>">Pay</a>
           
             
-            <% } } else {
+            <%  } } else {
             %>Reject<% }%>
         </td>
 
