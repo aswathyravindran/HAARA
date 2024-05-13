@@ -15,7 +15,7 @@
     <%
         String word=request.getParameter("word");
 //        out.print(word);
-        String sel = "SELECT * FROM tbl_furniture WHERE furniture_price LIKE '%" + word + "%'";
+        String sel = "SELECT * FROM tbl_furniture WHERE furniture_price <=  "+ word  ;
 //        out.print(sel);
         ResultSet rs = con.selectCommand(sel);
         while (rs.next()) {
