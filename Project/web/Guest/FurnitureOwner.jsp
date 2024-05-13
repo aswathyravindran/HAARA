@@ -13,6 +13,22 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>F_OWNER</title>
     </head>
+    <%if (request.getParameter("btnsubmit") != null) {
+            String email = request.getParameter("txtemail");
+            String selQry = "select furniture_owner_email from tbl_furniture_owner where furniture_owner_email='" + email + "'";
+            ResultSet rs1 = con.selectCommand(selQry);
+
+            if (rs1.next()) {
+    %>
+    <script>
+        alert("Email already taken");
+        window.location = "FurnitureOwner.jsp";
+    </script> <%
+    }
+    }
+    %>
+
+    
     <body>
         <%@include file="Head.jsp" %>
         <p align="center">Furniture Owner SignUp </p>
