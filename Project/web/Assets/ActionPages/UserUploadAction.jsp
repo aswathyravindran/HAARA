@@ -85,6 +85,8 @@
             }
 
         }
+        String selUser = "select user_email from tbl_user where user_email='" + value[2] + "'";
+            ResultSet rs1 = obj.selectCommand(selUser);
 
         if (! value[3].equals(value[4]))  {
             %> 
@@ -96,6 +98,14 @@
 </script>
 <%
         }
+        
+        else if (rs1.next()) {
+    %>
+    <script>
+        alert("Email already taken");
+        window.location.href = "../../Guest/NewUser.jsp";
+    </script> <%
+    }  
         else{
 
         String InsQry = "insert into tbl_user (user_name,user_contact,user_email,user_password,place_id,user_address,user_proof,user_photo)"

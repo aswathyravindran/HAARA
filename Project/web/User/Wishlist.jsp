@@ -27,7 +27,8 @@
 
 
         <%        int i = 0;
-            String selQry = "select * from tbl_wishlist";
+            String selQry = "select * from tbl_wishlist where user_id='" + session.getAttribute("uid") + "'";
+
             ResultSet rs = con.selectCommand(selQry);
             while (rs.next()) {
                 if (rs.getString("furniture_id") != null) {

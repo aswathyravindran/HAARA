@@ -14,6 +14,23 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     </head>
+    <%if (request.getParameter("btnsubmit") != null) {
+            String email = request.getParameter("txtemail");
+            String selQry = "select user_email from tbl_user where user_email='" + email + "'";
+            ResultSet rs1 = con.selectCommand(selQry);
+
+            if (rs1.next()) {
+    %>
+    <script>
+        alert("Email already taken");
+        window.location = "NewUser.jsp";
+    </script> <%
+    }
+    }
+    %>
+
+
+
     <body>
         <%@include file="Head.jsp" %>
         <h2>New User</h2>
