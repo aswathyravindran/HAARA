@@ -7,6 +7,7 @@
 <%@page import="java.sql.ResultSet"%>
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="java.util.Date" %>
+<%@ page import="java.util.concurrent.TimeUnit" %>
 <jsp:useBean class="DB.ConnectionClass" id="con"></jsp:useBean>
 <%@include file="Head.jsp" %>
 <table border="1" align="center">
@@ -30,30 +31,7 @@
         <td ><%
             int s1 = Integer.parseInt(rs.getString("request_status"));
             int p = rs.getInt("payment_status");
-            try {
-        // Get the start date from the database
-        String startDateString = rs.getString("from_date");
-        
-        // DEBUG: Print the startDateString
-        out.println("startDateString: " + startDateString);
-
-        // Convert the start date string to a Date object
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        Date startDate = sdf.parse(startDateString);
-
-        // Get the current date
-        Date currentDate = new Date();
-        
-        // Compare the start date with the current date
-        if (startDate.before(currentDate)) {
-            out.println("Coming Soon");
-        } else {
-            // Print the start date in the desired format
-            out.println(sdf.format(startDate));
-        }
-    } catch (Exception e) {
-        out.println("Error: " + e.getMessage());
-    }
+            
             if (s1 == 0) {
             %>Pending
             <% } else if (s1 == 1) {
@@ -94,12 +72,42 @@
         String selQry1 = "select * from tbl_request r inner join tbl_property f on f.property_id=r.property_id inner join tbl_property_owners fo on fo.property_owners_id=f.property_owners_id inner join tbl_user u on u.user_id=r.user_id where u.user_id='" + session.getAttribute("uid") + "'";
         System.out.println(selQry);
         ResultSet rs1 = con.selectCommand(selQry1);
-
+        
         while (rs1.next()) {
+String startDateString = rs1.getString("from_date");
 
+    // Convert the start date string to a Date object
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+    Date startDate = sdf.parse(startDateString);
+
+    // Get the current date
+    Date currentDate = new Date();
+
+    // Calculate the difference between the two dates in milliseconds
+   long differenceMillis = startDate.getTime() - currentDate.getTime();
+
+    // Convert milliseconds to days and take the absolute value
+    int differenceDays = (int) Math.abs(TimeUnit.DAYS.convert(differenceMillis, TimeUnit.MILLISECONDS));
+
+    
             j++;
 
     %>
+    
+    <% if (request.getParameter("can")!=null){
+        String id = request.getParameter("can");
+        String upQry = "update tbl_request set request_status= 3 where request_id='" + request.getParameter("can") + "'";
+        if(con.executeCommand(upQry)){
+            %>
+            <script>
+                alert("Cancelled")
+                window.location="UViewRequest.jsp"
+                </script>
+            <%
+        }
+    }
+    %>
+    
 
     <tr>
         <td ><%=j%></td>
@@ -115,6 +123,12 @@
             <a href="PChat/Chat.jsp?id=<%=rs1.getString("property_owners_id")%>">Chat</a>
             
             <%if (p == 1) {
+                if (differenceDays > 0) {
+%>  
+<button onclick="cancel(<%=rs1.getString("request_id")%>)">Cancel</button>
+        
+<%
+    }
             %>Paid
             <% } else if (p == 0) {
             %>
@@ -134,4 +148,16 @@
 
     %>
 </table>
+    <script>
+       function cancel(rid){
+            var result = confirm("Are you sure you want to cancel?You will loss 10% of your paid amount on cancellation!");
+             if (result) {
+                    // If user clicks OK, redirect to page 1
+                    window.location.href = "UViewRequest.jsp?can=" + rid;
+                } else {
+                    // If user clicks Cancel, redirect to page 2
+                    window.location.href = "UViewRequest.jsp";
+                }
+        }
+        </script>
 <%@include file="Foot.jsp" %>

@@ -100,7 +100,17 @@
                     <td colspan="2">
                         <a href="ViewPhotos.jsp?prid=<%=rs3.getString("property_id")%>">View More Photos</a>
                         <input type="submit" value="Wishlist" name="btnwish">
+                        <% String SelQry = "select * from tbl_request where request_status = 1 and property_id ='"+ request.getParameter("pid") +"'";
+                        ResultSet rs = con.selectCommand(SelQry);
+                        
+                        if (rs.next()){
+                            out.print("Currently Unavailable");
+                        }else{
+                            %>
                         <input type="submit" value="Request" name="btnreq">
+                                <%
+                            }
+                                %>
                     </td>
                 </tr>
 
