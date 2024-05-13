@@ -61,6 +61,7 @@
 
     %>
     <body>
+        <%@include file = "Head.jsp" %>
         <form name="frmEditpprofile">
             <table border="1" align="center" height="300px" width="300px">
                 <tr align="center">
@@ -71,21 +72,18 @@
                     <td><input type="text" name="txtcurr"> </td>
                 </tr>
                 <tr>
-                    <td>
-                        New Password
-                    </td>
-                    <td><input type="text" name="txtnew"></td>
+                    <td>New Password</td>
+                    <td><input type="text" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  required name="txtnew"></td>
                 </tr>
                 <tr>
-                    <td>
-                        Re password
-                    </td>
-                    <td><input type="text" name="txtrepass"></td>
+                    <td>Re-Password</td>
+                    <td><input type="password"  required name="txtrepass"> </td>
                 </tr>
                 <tr align="center">
                     <td colspan="2"><input type="submit" value="Submit" name="btnsubmit"></td>
                 </tr>
             </table>
         </form>
+        <%@include file="Foot.jsp" %>
     </body>
 </html>

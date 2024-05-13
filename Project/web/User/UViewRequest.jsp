@@ -5,6 +5,8 @@
 --%>
 
 <%@page import="java.sql.ResultSet"%>
+<%@ page import="java.text.SimpleDateFormat" %>
+<%@ page import="java.util.Date" %>
 <jsp:useBean class="DB.ConnectionClass" id="con"></jsp:useBean>
 <%@include file="Head.jsp" %>
 <table border="1" align="center">
@@ -28,6 +30,30 @@
         <td ><%
             int s1 = Integer.parseInt(rs.getString("request_status"));
             int p = rs.getInt("payment_status");
+            try {
+        // Get the start date from the database
+        String startDateString = rs.getString("from_date");
+        
+        // DEBUG: Print the startDateString
+        out.println("startDateString: " + startDateString);
+
+        // Convert the start date string to a Date object
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date startDate = sdf.parse(startDateString);
+
+        // Get the current date
+        Date currentDate = new Date();
+        
+        // Compare the start date with the current date
+        if (startDate.before(currentDate)) {
+            out.println("Coming Soon");
+        } else {
+            // Print the start date in the desired format
+            out.println(sdf.format(startDate));
+        }
+    } catch (Exception e) {
+        out.println("Error: " + e.getMessage());
+    }
             if (s1 == 0) {
             %>Pending
             <% } else if (s1 == 1) {

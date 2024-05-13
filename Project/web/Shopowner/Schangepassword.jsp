@@ -68,11 +68,11 @@
                 </tr>
                 <tr>
                     <td>New Password</td>
-                    <td><input type="password" name="txtnew"> </td>
+                    <td><input type="text" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  required name="txtnew"></td>
                 </tr>
                 <tr>
-                    <td>Re enter</td>
-                    <td><input type="password" name="txtrepass"></td>
+                    <td>Re-Password</td>
+                    <td><input type="password"  required name="txtrepass"> </td>
                 </tr>
                 <tr>
                     <td colspan="2" align="center"><input type="submit" value="Submit" name="btnsubmit"></td>
