@@ -109,7 +109,8 @@
         String selUser = "select furniture_owner_email from tbl_furniture_owner where furniture_owner_email='" + value[2] + "'";
             ResultSet rs1 = obj.selectCommand(selUser);
 
-        if (! value[3].equals(value[4]))  {
+    
+       if (! value[3].equals(value[4]))  {
             %> 
 <script type="text/javascript">
     alert("Passwords do not match");
@@ -133,8 +134,7 @@
         
         String InsQry = "insert into tbl_furniture_owner (furniture_owner_name,furniture_owner_contact,furniture_owner_email,furniture_owner_password,place_id,furniture_owner_address,furniture_owner_proof,furniture_owner_photo)"
                 + "values('" + value[0] + "','" + value[1] + "','" + value[2] + "','" + value[3] + "','" + value[6] + "','" + value[7] + "','" + proof + "','" + photo + "')";
-
-        System.out.println(InsQry);
+ System.out.println(InsQry);
         boolean status = obj.executeCommand(InsQry);
 
         if (status == true) {
@@ -142,12 +142,11 @@
 <script type="text/javascript">
     alert("Registration Completed");
     setTimeout(function() {
-        window.location.href = '../../Guest/FurnitureOwner.jsp';
+        window.location.href = '../../Guest/FurnitureOwner.jsp'
     }, 40);//40millisecend it go to next page
 </script>
 <%
         }
-    }
+    } }
 
 %>
-

@@ -109,7 +109,7 @@
         String selUser = "select Property_owners_email from tbl_property_owners where property_owners_email='" + value[2] + "'";
             ResultSet rs1 = obj.selectCommand(selUser);
 
-        if (! value[3].equals(value[4]))  {
+       if (! value[3].equals(value[4]))  {
             %> 
 <script type="text/javascript">
     alert("Passwords do not match");
@@ -127,8 +127,8 @@
         window.location.href = "../../Guest/PropertyOwner.jsp";
     </script> <%
     }  
-        
-        
+        else{
+
         String InsQry = "insert into tbl_property_owners (property_owners_name,property_owners_contact,property_owners_email,property_owners_password,place_id,property_owners_address,property_owners_proof,property_owners_photo)"
                 + "values('" + value[0] + "','" + value[1] + "','" + value[2] + "','" + value[3] + "','" + value[6] + "','" + value[7] + "','" + proof + "','" + photo + "')";
 
@@ -140,12 +140,11 @@
 <script type="text/javascript">
     alert("Registration Completed");
     setTimeout(function() {
-        window.location.href = '../../Guest/PropertyOwner.jsp';
+        window.location.href = '../../Guest/PropertyOwner.jsp'
     }, 40);//40millisecend it go to next page
 </script>
 <%
-        } else { out.print(InsQry);}
-    }
+        }
+    } }
 
 %>
-

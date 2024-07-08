@@ -1,8 +1,3 @@
-<%-- 
-    Document   : Login.jsp
-    Created on : 18 Mar, 2024, 5:20:28 PM
-    Author     : Admin
---%>
 
 <%@page import="java.sql.ResultSet"%>
 <jsp:useBean class="DB.ConnectionClass" id="con"></jsp:useBean>

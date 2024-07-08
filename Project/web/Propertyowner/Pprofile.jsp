@@ -16,7 +16,7 @@
     </head>
     <body>
         <%@include file="Head.jsp" %>
-        <%if (request.getParameter("btnsubmit") != null) {
+        <%if (request.getParameter("btnedit") != null) {
                 response.sendRedirect("../Propertyowner/PeditProfile.jsp");
             } else if (request.getParameter("change Password") != null) {
                 response.sendRedirect("../Propertyowner/PchangePassword.jsp");
