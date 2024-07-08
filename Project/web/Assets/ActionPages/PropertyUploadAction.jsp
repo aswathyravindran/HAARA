@@ -93,7 +93,6 @@
         String InsQry = "insert into tbl_property (property_file,property_price,property_details,place_id,property_address,property_contract_time,property_owners_id)"
                 + "values('" + photo + "','" + value[0] + "','" + value[1] + "','" + value[3] + "','" + value[4] + "','" + value[5] +"', '"+session.getAttribute("pid")+"')";
 
-        System.out.println(InsQry);
         boolean status = obj.executeCommand(InsQry);
 
         if (status == true) {

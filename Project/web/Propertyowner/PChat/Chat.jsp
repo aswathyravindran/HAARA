@@ -56,7 +56,7 @@
                     </div>
                     <div class="nav-end">
 
-                        <a href="../HomePage.jsp" class="chat-nav-item is-icon is-hidden-mobile">
+                        <a href="../PhomePage.jsp" class="chat-nav-item is-icon is-hidden-mobile">
                             <i data-feather="home"></i>
                         </a>
 
