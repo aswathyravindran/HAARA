@@ -81,6 +81,26 @@
                         out.println(ex);
                     }
                 }
+                if (field_name.equals("file_proof"))//write the name of image here it is img_product
+                {
+                    String ext = file_name.substring(file_name.lastIndexOf("."));//means the extension is stored to variable ext
+                    //setting path to store image
+                    File proj_path = new File(config.getServletContext().getRealPath("/"));
+                    String file_path = proj_path.getParentFile().getParentFile().getPath() + "\\Web\\Assets\\Files\\";//path for storing image
+                    Random r = new Random();//to generate random number
+                    int r_num = r.nextInt(1111) + 999;//values between this are generated
+
+                    proof = "UserPhoto_" + r_num + ext;//generating random number for images so this name and format of imagewil be stored inside the server
+                    //creating a file object
+                    savedFile = new File(file_path + photo);//fn contains name of file
+                    try {
+                        //writing the file object
+                        f_item.write(savedFile);  //writing to server means the folder             
+
+                    } catch (Exception ex) {
+                        out.println(ex);
+                    }
+                }
 
             }
 
@@ -109,7 +129,7 @@
         else{
 
         String InsQry = "insert into tbl_user (user_name, user_contact, user_email, user_password, place_id, user_address, user_proof, user_photo) "
-                          + "values('" + value[0] + "', '" + value[1] + "', '" + value[2] + "', '" + value[3] + "', '" + value[5] + "', '" + value[6] + "', '" + photo + "', '" + photo + "')";
+                          + "values('" + value[0] + "', '" + value[1] + "', '" + value[2] + "', '" + value[3] + "', '" + value[6] + "', '" + value[7] + "', '" + proof + "', '" + photo + "')";
         
         boolean status = obj.executeCommand(InsQry);
 

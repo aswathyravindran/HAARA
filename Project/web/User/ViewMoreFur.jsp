@@ -99,7 +99,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <a href="ViewPhotos.jsp?prid=<%=rs3.getString("furniture_id")%>">View More Photos</a>
+                        <a href="ViewFPhotos.jsp?frid=<%=rs3.getString("furniture_id")%>">View More Photos</a>
                         <input type="submit" value="Wishlist" name="btnwish">
                         <input type="submit" value="Request" name="btnreq">
                     </td>

@@ -57,7 +57,7 @@
                 <tr align="center">
                     <td colspan="2">
                         <input type="submit" value="Submit" name="btnsubmit" >
-                        <input type="cancel" value="cancel" name="btncancel" >
+                        <input type="reset" value="Reset" name="btncancel" >
                     </td>
                 </tr>
             </table>
